@@ -208,7 +208,7 @@ gerarPdf.addEventListener('click', ()=>{
 
     localStorage.setItem('propostaGerada', JSON.stringify(proposta));
 
-    const url = "https://script.google.com/macros/s/AKfycbzooQvT8QGu8C08y1GLsYuYew22cFhAbVNuJVxB_hVVtVKNE4ReT5hNgAKyL2R3R2V2/exec";
+    const url = "https://script.google.com/macros/s/AKfycbyd4nwSMmewBnYNoYEb4sz4NiV4P_fo47LCC7s8BwforLXV1WbDnYX3fs4CmtJwS7Va-A/exec";
 
         fetch(url, {
             method: "POST",
