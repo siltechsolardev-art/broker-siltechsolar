@@ -340,42 +340,42 @@ function inserirParcela () {
         const resumoResultadoMcs = document.getElementById('resultado-mcs-resumo-negociacao')
 
 
-        textoAnalise.classList.remove('verde', 'laranja', 'vermelho');
-        tituloAnalise.classList.remove('verde', 'laranja', 'vermelho');
-        containerAnalise.classList.remove('fundo-verde','fundo-laranja', 'fundo-vermelho');
+        textoAnalise.classList.remove('color-green', 'color-orange', 'color-red');
+        tituloAnalise.classList.remove('color-green', 'color-orange', 'color-red');
+        containerAnalise.classList.remove('color-green-background','color-orange-background', 'color-red-background');
         emojiAnalise.removeAttribute('class')
-        emojiAnalise.classList.add('bi' ,'bi-emoji-expressionless', 'icone-valor-negociacao')
+        emojiAnalise.classList.add('bi' ,'bi-emoji-expressionless', 'icon-large')
         resumoResultadoMcs.textContent = "Aguardando análise"
         if (valorMcs >= 30 ){
 
-            textoAnalise.classList.add('verde')
-            tituloAnalise.classList.add('verde')
+            textoAnalise.classList.add('color-green')
+            tituloAnalise.classList.add('color-green')
             textoAnalise.textContent = "Aprovado"
             emojiAnalise.removeAttribute('class')
-              emojiAnalise.classList.add('bi' ,'bi-emoji-smile', 'icone-valor-negociacao', 'verde')
-            containerAnalise.classList.add('fundo-verde')
+              emojiAnalise.classList.add('bi' ,'bi-emoji-smile', 'icon-large', 'color-green')
+            containerAnalise.classList.add('color-green-background')
               resumoResultadoMcs.textContent = "Aprovado"
 
         }
         else if (valorMcs >= 27 && valorMcs <= 29.99 ) {
 
-            textoAnalise.classList.add('laranja')
-            tituloAnalise.classList.add('laranja')
+            textoAnalise.classList.add('color-orange')
+            tituloAnalise.classList.add('color-orange')
             textoAnalise.textContent = "Autorização"
             emojiAnalise.removeAttribute('class')
-              emojiAnalise.classList.add('bi' ,'bi-emoji-surprise', 'icone-valor-negociacao', 'laranja')
-            containerAnalise.classList.add('fundo-laranja')
+              emojiAnalise.classList.add('bi' ,'bi-emoji-surprise', 'icon-large', 'color-orange')
+            containerAnalise.classList.add('color-orange-background')
               resumoResultadoMcs.textContent = "Autorização"
 
         }
         else if  (valorMcs <= 26.99 ){
 
-            textoAnalise.classList.add('vermelho')
-            tituloAnalise.classList.add('vermelho')
+            textoAnalise.classList.add('color-red')
+            tituloAnalise.classList.add('color-red')
             textoAnalise.textContent = "Reprovado"
             emojiAnalise.removeAttribute('class')
-              emojiAnalise.classList.add('bi' ,'bi-emoji-frown', 'icone-valor-negociacao', 'vermelho')
-            containerAnalise.classList.add('fundo-vermelho')
+              emojiAnalise.classList.add('bi' ,'bi-emoji-frown', 'icon-large', 'color-red')
+            containerAnalise.classList.add('color-red-background')
                 resumoResultadoMcs.textContent = "Reprovado"
 
         }

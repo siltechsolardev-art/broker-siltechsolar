@@ -1,0 +1,153 @@
+.f-direction-collum {
+
+    display: flex;
+    flex-direction: column;
+}
+.f-direction-row {
+
+    display: flex;
+    flex-direction: row;
+}
+.flex-center {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-right {
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.flex-left {
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.wall-vertical {
+
+   
+    width: 1px;
+    background-color: var(--color-background);
+
+
+}
+.wall-horizontal {
+
+    height: 1px;
+
+    background-color: var(--color-background);
+
+
+}
+.row {
+
+    flex-direction: row;
+}
+.cursor-pointer {
+
+    cursor: pointer;
+}
+.width-auto{
+
+    width: auto;
+    justify-content: space-evenly;
+}
+.gap-high {
+
+    gap: 12px;
+}
+.gap-med {
+
+    gap: 8px;
+}
+.gap-small {
+
+    gap: 6px;
+}
+.background-white {
+
+    background-color: white;
+}
+.background-green {
+
+    background-color: var(--color-green-light);
+    border: 2px solid var(--color-green-dark);
+    border-radius: 4px;
+}
+
+.background-orange {
+
+    background-color: var(--color-orange-light);
+    border: 2px solid var(--color-orange-dark);
+    border-radius: 4px;
+}
+.background-red {
+
+    background-color: var(--color-red-light);
+    border: 2px solid var(--color-red-dark);
+    border-radius: 4px;
+}
+
+.background-gray {
+
+    background-color: var( --color-text-second);
+    border: 2px solid var(--color-text-first);
+    border-radius: 4px;
+}
+.background-border-first {
+
+    background-color: none;
+    border: 1px solid var(--color-first);
+
+}
+
+.fundo-selecao {
+
+    background-color: var(--color-background-light);
+}
+.cor-selecao{
+
+
+    color: var(--color-first) !important;
+
+}
+.border-none {
+
+    border: none;
+}
+.esconder {
+
+    display: flex;
+}
+.hidden {
+
+    display: none;
+}
+.showGrid {
+
+    display: grid;
+}
+
+.showFlex {
+
+    display: flex;
+}
+.text-center {
+
+    text-align: center;
+}
+.erro-borda {
+    border: 1px solid var(--color-red);
+}
+.flex-1 {
+
+    display: flex;
+    flex: 1;
+}
+.align-self-left{
+
+    align-self: flex-start;
+}

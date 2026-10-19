@@ -1,0 +1,62 @@
+.icon-super {
+
+    font-size: 70px;
+}
+.icon-extra {
+
+    font-size: 44px;
+}
+.icon-large {
+
+    font-size: 28px;
+}
+.text-title {
+
+    font-size: 18px;
+}
+.text-subtitle {
+
+    font-size: 12px;
+}
+.text-large {
+
+    font-size: 16px;
+}
+.text-normal {
+
+    font-size: 12px;
+}
+.text-small {
+
+    font-size: 8px;
+}
+.text-tin {
+
+    font-size: 6px;
+}
+
+.label {
+
+    font-size: 12px;
+    margin: 4px;
+    font-style: italic;
+    color: var(--color-first);
+    font-weight: 700;
+}
+
+.font-hard {
+
+    font-weight: 700 ;
+}
+.font-medium {
+
+    font-weight: 500 ;
+}
+.font-fine {
+
+    font-weight: 400 ;
+}
+.i {
+
+    font-style: italic;
+}

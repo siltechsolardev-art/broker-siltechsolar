@@ -1,0 +1,70 @@
+.wid-100{
+ width: 100%;
+}
+.wid-90{
+ width: 90%;
+}
+.wid-80{
+ width: 80%;
+}
+.wid-70{
+ width: 70%;
+}
+.wid-60{
+ width: 60%;
+}
+.wid-50{
+ width: 50%;
+}
+.wid-40{
+ width: 40%;
+}
+.wid-30{
+ width: 30%;
+}
+.wid-20{
+ width: 20%;
+}
+.wid-10{
+ width: 10%;
+}
+
+.hei-100{
+
+    height: 100%;
+}
+.hei-80{
+
+    height: 80%;
+}
+
+.hei-60{
+
+    height: 60%;
+}
+
+.hei-40{
+
+    height: 40%;
+}
+
+.hei-20{
+
+    height: 20%;
+}
+.pad-4 {
+
+    padding: 4px;
+}
+.pad-8 {
+
+    padding: 8px;
+}
+.pad-12 {
+
+    padding: 12px;
+}
+.pad-16 {
+
+    padding: 16px;
+}

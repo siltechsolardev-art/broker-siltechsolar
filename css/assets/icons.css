@@ -1,0 +1,41 @@
+.icon-navigation {
+
+    font-size: 16px;
+}
+.icon-title {
+
+    height: 20px;
+    width: 20px;
+
+}
+.icon-header{
+
+    font-size: 20px;
+    background-color: var(--color-text-second);
+    color: var(--color-first);
+    padding: 6px;
+    border-radius: 4px;
+}
+.icon-header-card {
+
+    font-size: 16px;
+    padding: 6px;
+    background-color: var(--color-text-second);
+    border-radius: 4px;
+    color: var(--cor-preto);
+}
+
+.icone-card-info{
+
+    font-size: 22px;
+    padding: 8px;
+    color: var(--cor-terciaria);
+    background-color: var(--cor-fundo);
+    border-radius: 50px;
+}
+.background-icon-green{
+
+    background-color: var(--color-green-light);
+    border-radius: 60px;
+    padding: 12px 20px;
+}
