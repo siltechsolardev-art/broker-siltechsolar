@@ -61,17 +61,16 @@ function inserirTelefone(){
 }
 function inserirTeste () { 
     
-        const canalContainerProposta = document.getElementById('canal-container-proposta')
+        const testeFormularioProposta = document.getElementById('teste-proposta')
 
-        if(testeFormularioProposta.checked) {
-
+        if(testeFormularioProposta.value === "Sim") {
 
             proposta.teste = "Sim"
-            canalContainerProposta.classList.add('hidden')
+  
         }
         else {
             proposta.teste = "Não"
-            canalContainerProposta.classList.remove('hidden')
+
  
         }
     
@@ -167,16 +166,18 @@ function inserirQuantidadeEnergia() {
 }
 function inserirExpansao(){
 
-    if(expansaoFormularioProposta.checked){
+
+  const expansaoFormularioProposta = document.getElementById('expansao-proposta')
+
+    if(expansaoFormularioProposta.value === "Sim"){
 
         proposta.expansao = "Sim"
-        campoQtdExpansao.classList.remove('hidden')
+        
     }
     else{
 
         proposta.expansao = "Não";
   
-        campoQtdExpansao.classList.add('hidden');
     }
 }
 function inserirQtdExpansao(){
@@ -243,6 +244,7 @@ function calcularArea(){
  }
   //OK
   function custoEquipamento() {
+      
     const inversor3kw = 1450;
     const inversor6kw = 2450;
 
@@ -262,11 +264,7 @@ function calcularArea(){
       proposta.inversor = "1x 3kw"
       potenciaTotal = potencia3kw
       return potenciaTotal
-      // return {
-      //   valorTotal: inversor3kw + valorPlaca * placas,
-      //   potenciaTotal: potencia3kw,
-      //   inversor: "1x 3kw",
-      // };
+     
     }
     if (placaTotal >= 9 && placaTotal <= 15) {
       let valorPlaca = 800;
@@ -276,11 +274,7 @@ function calcularArea(){
       potenciaTotal = potencia6kw
       proposta.inversor = "1x 6kw"
        return potenciaTotal
-      // return {
-      //   valorTotal: inversor6kw + valorPlaca * placas,
-      //   potenciaTotal: potencia6kw,
-      //   inversor: "1x 6kw",
-      // };
+     
     }
     if (placaTotal >= 16 && placaTotal <= 23) {
       let valorPlaca = 775;
@@ -290,11 +284,7 @@ function calcularArea(){
       potenciaTotal = potencia6kw + potencia3kw
       proposta.inversor = "1x 6kw + 1x 3kw"
        return potenciaTotal
-      // return {
-      //   valorTotal: inversor6kw + inversor3kw + valorPlaca * placas,
-      //   potenciaTotal: potencia6kw + potencia3kw,
-      //   inversor: "1x 6kw + 1x 3kw",
-      // };
+    
     }
     if (placaTotal >= 24 && placaTotal <= 30) {
       let valorPlaca = 750;
@@ -303,11 +293,7 @@ function calcularArea(){
       proposta.inversor = "2x 6kw"
       potenciaTotal = potencia6kw * 2
        return potenciaTotal
-      // return {
-      //   valorTotal: inversor6kw * 2 + valorPlaca * placas,
-      //   potenciaTotal: potencia6kw * 2,
-      //   inversor: "2x 6kw",
-      // };
+      
     }
     if (placaTotal >= 31 && placaTotal <= 45) {
       let valorPlaca = 725;
@@ -317,11 +303,7 @@ function calcularArea(){
       proposta.inversor = "3x 6kw"
       potenciaTotal = potencia6kw * 3
        return potenciaTotal
-      // return {
-      //   valorTotal: inversor6kw * 3 + valorPlaca * placas,
-      //   potenciaTotal: potencia6kw * 3,
-      //   inversor: "3x 6kw",
-      // };
+     
     }
     if (placaTotal >= 46 && placaTotal <= 60) {
       let valorPlaca = 700;
@@ -331,11 +313,7 @@ function calcularArea(){
       potenciaTotal = potencia6kw * 4
        return potenciaTotal
 
-      // return {
-      //   valorTotal: inversor6kw * 4 + valorPlaca * placas,
-      //   potenciaTotal: potencia6kw * 4,
-      //   inversor: "4x 6kw",
-      // };
+      
     }
   }
   //OK
@@ -415,11 +393,11 @@ function calcularArea(){
     const instalacao = proposta.instalacao;
 
     if (instalacao === "Bifásico") {
-      return proposta.contaComSiltech = 70;
+      return proposta.contaComSiltech = 80;
     }
 
     if (instalacao === "Trifásico") {
-      return proposta.contaComSiltech = 110;
+      return proposta.contaComSiltech = 130;
     }
 
   }
@@ -475,7 +453,7 @@ function limparCamposProposta() {
 
   const nomeProposta = document.getElementById('nome-proposta')
   const telefoneProposta = document.getElementById('telefone-proposta')
-  const testeProposta = document.querySelector('.teste-proposta')
+  const testeProposta = document.getElementById('teste-proposta')
   const canalProposta = document.getElementById('canal-proposta')
   const localProposta = document.getElementById('local-proposta')
   const moduloProposta = document.getElementById('modulo-proposta')
@@ -483,7 +461,7 @@ function limparCamposProposta() {
   const promocaoProposta = document.getElementById('promocao-proposta')
   const consumoEnergiaProposta = document.getElementById('consumo-energia-proposta')
   const consumoPlacaProposta = document.getElementById('consumo-placa-proposta')
-  const expansaoProposta = document.querySelector('.expansao-proposta')
+  const expansaoProposta = document.getElementById('expansao-proposta')
   const qtdExpansaoProposta = document.getElementById('qtd-expansao-proposta')
   const precoProposta = document.getElementById('preco-kwh-proposta')
   const instalacaoProposta = document.getElementById('instalacao-proposta')
@@ -491,7 +469,7 @@ function limparCamposProposta() {
 
   nomeProposta.value = ""
   telefoneProposta.value = ""
-  testeProposta.checked = testeProposta.defaultValue;
+  testeProposta.value = ""
   canalProposta.value = ""
   localProposta.value = ""
   moduloProposta.value = ""
@@ -499,7 +477,7 @@ function limparCamposProposta() {
   promocaoProposta.value = ""
   consumoEnergiaProposta.value = ""
   consumoPlacaProposta.value = ""
-  expansaoProposta.checked = expansaoProposta.defaultChecked;
+  expansaoProposta.value = ""
   qtdExpansaoProposta.value = ""
   precoProposta.value = ""
   instalacaoProposta.value = ""
@@ -556,19 +534,23 @@ function validarDado(valor, formatador = null) {
 
 function espacoVazio(){
 
-  const mensagemErro = document.getElementById('mensagem-erro-proposta"')
   const nome = document.getElementById('nome-proposta')
   const containerNome = document.getElementById('c-nome')
-  // const teste = document.getElementById('teste-proposta')
-  // const canal = document.getElementById('canal-proposta')
-  // const containerCanal = document.getElementById('c-canal')
+  const teste = document.getElementById('teste-proposta')
+  const containerTeste = document.getElementById('c-teste')
+  const canal = document.getElementById('canal-proposta')
+  const containerCanal = document.getElementById('c-canal')
   const hsp = document.getElementById('hsp-proposta')
   const containerCidade = document.getElementById('c-cidade')
   const modulo = document.getElementById('modulo-proposta')
   const containerModulo = document.getElementById('c-modulo')
   const placas = document.getElementById('quantidade-placa-proposta')
-  const containerConsumo = document.getElementById('consumo-energia-proposta')
-  const containerPlacas = document.getElementById('consumo-placa-proposta')
+  const containerEnergia = document.getElementById('c-energia-proposta')
+  const containerPlacas = document.getElementById('c-placa-proposta')
+  const expansao = document.getElementById('expansao-proposta')
+  const containerExpansao = document.getElementById('c-expansao')
+  const qtdExpansao = document.getElementById('qtd-expansao-proposta')
+  const containerQtdExpansao = document.getElementById('c-expansao-placa')
   const preco = document.getElementById('preco-kwh-proposta')
   const containerPrecoKwh = document.getElementById('c-preco-kwh')
   const instalacao = document.getElementById('instalacao-proposta')
@@ -580,21 +562,27 @@ function espacoVazio(){
   if (nome.value === "") {
 
     containerNome.classList.add('erro-borda')
-    // mensagemErro.classList.remove('hidden')
     msgErro.classList.remove("hidden")
     return campoVazio = "Sim"
   }
-  //   if (canal.value === "") {
+  if (teste.value === "") {
 
-  //   containerCanal.classList.add('erro-borda')
-  //   // mensagemErro.classList.remove('hidden')
+      containerTeste.classList.add('erro-borda')
+      msgErro.classList.remove("hidden")
+      return campoVazio = "Sim"
     
-  //   return campoVazio = "Sim"
-  // }
+    }
+
+     if (canal.value=== "" && teste.value === "Não") {
+    
+      containerCanal.classList.add('erro-borda')
+      msgErro.classList.remove("hidden")
+      return campoVazio = "Sim"
+    
+    }
     if (hsp.textContent === "0,00" || hsp.textContent === "Cidade não encontrada") {
 
     containerCidade.classList.add('erro-borda')
-    // mensagemErro.classList.remove('hidden')
         msgErro.classList.remove("hidden")
 
     return campoVazio = "Sim"
@@ -602,24 +590,34 @@ function espacoVazio(){
    if (modulo.value === "") {
 
     containerModulo.classList.add('erro-borda')
-    // mensagemErro.classList.remove('hidden')
         msgErro.classList.remove("hidden")
 
     return campoVazio = "Sim"
   }
   if (placas.textContent === "0") {
 
-    containerConsumo.classList.add('erro-borda')
+    containerEnergia.classList.add('erro-borda')
     containerPlacas.classList.add('erro-borda')
-    // mensagemErro.classList.remove('hidden')
         msgErro.classList.remove("hidden")
 
     return campoVazio = "Sim"
   }
+
+  if (expansao.value === ""){
+
+    containerExpansao.classList.add('erro-borda')
+    msgErro.classList.remove("hidden")
+    return campoVazio = "Sim"
+  }
+ if (expansao.value === "Sim" &&
+    (qtdExpansao.value === "" || qtdExpansao.value === "0")) {
+  containerQtdExpansao.classList.add("erro-borda");
+  msgErro.classList.remove("hidden");
+  return "Sim";
+}
   if (preco.value === "") {
 
     containerPrecoKwh.classList.add('erro-borda')
-    // mensagemErro.classList.remove('hidden')
         msgErro.classList.remove("hidden")
 
     return campoVazio = "Sim"
@@ -627,7 +625,6 @@ function espacoVazio(){
    if (instalacao.value === "") {
 
     containerInstalacao.classList.add('erro-borda')
-    // mensagemErro.classList.remove('hidden')
         msgErro.classList.remove("hidden")
 
     return campoVazio = "Sim"
@@ -635,8 +632,7 @@ function espacoVazio(){
   if (telhado.value === "") {
 
     containerTelhado.classList.add('erro-borda')
-    // mensagemErro.classList.remove('hidden')
-        msgErro.classList.remove("hidden")
+    msgErro.classList.remove("hidden")
 
     return campoVazio = "Sim"
   }
@@ -648,24 +644,32 @@ function limparCamposValidados (){
 
 
   const containerNome = document.getElementById('c-nome')
+  const containerTeste = document.getElementById('c-teste')
+  const containerCanal = document.getElementById('c-canal')
   const containerCidade = document.getElementById('c-cidade')
   const containerModulo = document.getElementById('c-modulo')
-  const containerConsumo = document.getElementById('consumo-energia-proposta')
-  const containerPlacas = document.getElementById('consumo-placa-proposta')
+  const containerEnergia = document.getElementById('c-energia-proposta')
+  const containerPlacas = document.getElementById('c-placa-proposta')
+  const containerExpansao = document.getElementById('c-expansao')
+  const containerQtdExpansao = document.getElementById('c-expansao-placa')
   const containerPrecoKwh = document.getElementById('c-preco-kwh')
   const containerInstalacao = document.getElementById('c-instalacao')
   const containerTelhado = document.getElementById('c-telhado')
   const msgErro = document.getElementById('mensagem-erro-proposta')
 
     containerNome.classList.remove('erro-borda')
+    containerTeste.classList.remove('erro-borda')
+    containerCanal.classList.remove('erro-borda')
     containerCidade.classList.remove('erro-borda')
     containerModulo.classList.remove('erro-borda')
-    containerConsumo.classList.remove('erro-borda')
+    containerEnergia.classList.remove('erro-borda')
     containerPlacas.classList.remove('erro-borda')
+    containerExpansao.classList.remove('erro-borda')
+    containerQtdExpansao.classList.remove('erro-borda')   
     containerPrecoKwh.classList.remove('erro-borda')
     containerInstalacao.classList.remove('erro-borda')
     containerTelhado.classList.remove('erro-borda')
-          msgErro.classList.add('hidden')
+    msgErro.classList.add('hidden')
 
 }
 //Funções para solicitar dados do banco de dados.

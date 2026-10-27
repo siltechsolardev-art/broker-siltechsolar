@@ -40,7 +40,7 @@ function atualizarResumo(){
 
     const qtdExpansaoResumo = document.getElementById('qtd-expansao-resumo-proposta')
 
-    if(expansaoFormularioProposta.checked){
+    if(expansaoFormularioProposta.value === 'Sim'){
 
        qtdExpansaoResumo.textContent = proposta.qtdExpansao
     }

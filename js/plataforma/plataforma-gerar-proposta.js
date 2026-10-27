@@ -92,7 +92,7 @@ const telefoneFormularioProposta = document.getElementById('telefone-proposta')
 telefoneFormularioProposta.addEventListener('input', calcularDados)
 
 //Código para teste de proposta
-const testeFormularioProposta = document.querySelector('.teste-proposta')
+const testeFormularioProposta = document.getElementById('teste-proposta')
 
 testeFormularioProposta.addEventListener('change', calcularDados)
 
@@ -137,7 +137,7 @@ consumoEnergia.addEventListener('input', () =>{
 
 //Código para gerar expansão
 
-const expansaoFormularioProposta = document.querySelector('.expansao-proposta')
+const expansaoFormularioProposta = document.getElementById('expansao-proposta')
 const campoQtdExpansao = document.getElementById('container-qtd-expansao-proposta')
 
 expansaoFormularioProposta.addEventListener('change', calcularDados)

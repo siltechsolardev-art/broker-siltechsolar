@@ -1,60 +1,63 @@
 
 
-const botaoDicaTeste = document.getElementById("botao-dica-teste")
-const botaoDicaConsumo = document.getElementById("botao-dica-consumo")
-const botaoDicaExpansao = document.getElementById("botao-dica-expansao")
+    const selecionarTeste = document.getElementById('teste-proposta')
 
-botaoDicaTeste.addEventListener('click', mostrarDicaTeste)
-botaoDicaExpansao.addEventListener('click', mostrarDicaExpansão)
-botaoDicaConsumo.addEventListener('click', mostrarDicaConsumo)
+    selecionarTeste.addEventListener('change', mostrarCanal)
 
+    function mostrarCanal(){
 
+        const canalContainerProposta = document.getElementById('canal-container-proposta')
 
-function mostrarDicaTeste(){
+        if(selecionarTeste.value === "Sim") {
 
-    const textoDica = document.getElementById('texto-dica-teste')
-    
-    textoDica.classList.toggle('hidden')
-    botaoDicaTeste.classList.toggle('width-auto')
-}
-function mostrarDicaConsumo(){
+            canalContainerProposta.classList.add('hidden')
+        }
+        else {
 
-    const textoDica = document.getElementById('texto-dica-consumo')
-
-    textoDica.classList.toggle('hidden')
-    botaoDicaConsumo.classList.toggle('width-auto')
-}
-function mostrarDicaExpansão(){
-
-    const textoDica = document.getElementById('texto-dica-expansao')
-
-    textoDica.classList.toggle('hidden')
-    botaoDicaExpansao.classList.toggle('width-auto')
-}
-
-const mudarInversor = document.getElementById('inversor-proposta')
-
-mudarInversor.addEventListener('change', mudarHibrido)
-
-function mudarHibrido(){
-
-
-
-
-    const containerHibrido = document.getElementById('main-hibrido-proposta')
-    const containerConsumo = document.getElementById('main-consumo-proposta')
-
-    if(mudarInversor.value === "Híbrido") {
-
-       containerHibrido.classList.remove('hidden')
-       containerConsumo.classList.add('hidden')
+            canalContainerProposta.classList.remove('hidden')
+        }
     }
-    else if (mudarInversor.value === "String Ongrid"){
 
-        containerConsumo.classList.remove('hidden')
-        containerHibrido.classList.add('hidden')
+    const selecionarExpansao = document.getElementById('expansao-proposta')
+
+    selecionarExpansao.addEventListener('change', mostrarExpansao)
+    function mostrarExpansao(){
+
+        const campoQtdExpansao = document.getElementById('container-qtd-expansao-proposta')
+
+        if(selecionarExpansao.value === "Sim") {
+
+            campoQtdExpansao.classList.remove('hidden')
+        } 
+        else {
+            campoQtdExpansao.classList.add('hidden')
+        }
     }
-}
+
+
+// const mudarInversor = document.getElementById('inversor-proposta')
+
+// mudarInversor.addEventListener('change', mudarHibrido)
+
+// function mudarHibrido(){
+
+
+
+
+//     const containerHibrido = document.getElementById('main-hibrido-proposta')
+//     const containerConsumo = document.getElementById('main-consumo-proposta')
+
+//     if(mudarInversor.value === "Híbrido") {
+
+//        containerHibrido.classList.remove('hidden')
+//        containerConsumo.classList.add('hidden')
+//     }
+//     else if (mudarInversor.value === "String Ongrid"){
+
+//         containerConsumo.classList.remove('hidden')
+//         containerHibrido.classList.add('hidden')
+//     }
+// }
 
 function esconderPlataforma(){
 

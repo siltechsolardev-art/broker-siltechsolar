@@ -10,8 +10,6 @@ function esconderPagamento2() {
 
    containerAddPagamento.classList.add('hidden')
    containerPagamento2.classList.remove('hidden')
-    
-
 
 }
 
@@ -50,3 +48,8 @@ function mostrarParcela2(){
    }
 }
 
+function resetarPagamento2(){
+
+   const tipoPagamento2 = document.getElementById('')
+   const quantidadePacela2 = document.getElementById('')
+}

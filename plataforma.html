@@ -55,8 +55,8 @@
     </div>
     <div class="configuracao-plataforma">
       <div class="container-navegation-item">
-        <i class="bi bi-database-gear icon-navigation color-white" id="icone-dashboard"></i>
-        <p class="text-normal color-white" id="texto-dashboard">Ajuste</p>
+        <i class="bi bi-person-workspace icon-navigation color-white" id="icone-dashboard"></i>
+        <p class="text-normal color-white" id="texto-dashboard">Suporte</p>
       </div>
       <div class="container-navegation-item">
         <i class="bi bi-gear icon-navigation color-white" id="icone-dashboard"></i>
@@ -68,7 +68,7 @@
       </div>
     </div>
     <main class="main-plataforma">
-      <section class="container-proposta showGrid " id="section-proposta">
+      <section class="screen-proposta showGrid  " id="section-proposta">
         <article class="card-proposta-cliente">
           <div class="header-card-container">
             <i class="bi bi-people icon-header-card"></i>
@@ -78,7 +78,7 @@
           </div>
           <div class="main-card">
             <div class="container-input">
-              <label for="" class="label">Cliente</label>
+              <label for="nome-proposta" class="label">Cliente</label>
               <div class="container-input-general" id="c-nome">
                 <div class="container-icon">
                     <i class="bi bi-person text-title color-third"></i>
@@ -87,7 +87,7 @@
               </div>
             </div>
             <div class="container-input">
-              <label for="" class="label">Celular</label>
+              <label for="telefone-proposta" class="label">Celular</label>
               <div class="container-input-general">
                 <div class="container-icon">
                 <i class="bi bi-telephone text-title color-third"></i>
@@ -96,22 +96,20 @@
               </div>
             </div>
             <div class="container-input">
-              <label for="" class="label">Proposta Teste</label>
-                <label class="switch">
-                  <input type="checkbox" class="teste-proposta" id="status">
-                  <span class="slider"></span>
-                </label>
-            </div>
-            <div class="container-input">
-              <div class="container-tip" id="botao-dica-teste">
+              <label for="teste-proposta" class="label">Proposta Teste</label>
+              <div class="container-input-general" id="c-teste">
                 <div class="container-icon">
-                  <i class="bi bi-exclamation-circle text-title color-blue-background"></i>
+                <i class="bi bi-clipboard text-title color-third"></i>
                 </div>
-                <p class="text-subtitle color-blue-background hidden" id="texto-dica-teste"> Ative essa opção caso deseja efetuar uma proposta teste.</p>
+                <select type="text" class="select-general"  id="teste-proposta">
+                  <option value="" class="option-general">Selecione</option>
+                  <option value="Sim" class="option-general">Sim</option>
+                  <option value="Não" class="option-general">Não</option>
+                </select>
               </div>
             </div>
-            <div class="container-input" id="canal-container-proposta">
-              <label for="" class="label">Canal de vendas</label>
+            <div class="container-input hidden" id="canal-container-proposta">
+              <label for="canal-proposta" class="label">Canal de vendas</label>
               <div class="container-input-general" id="c-canal">
                 <div class="container-icon">
                 <i class="bi bi-broadcast text-title color-third"></i>
@@ -141,7 +139,7 @@
           </div>
           <div class="main-card">
             <div class="container-input" >
-              <label for="" class="label">Cidade</label>
+              <label for="local-proposta" class="label">Cidade</label>
               <div class="container-input-general" id="c-cidade">
                 <div class="container-icon">
                 <i class="bi bi-pin-map text-title color-third"></i>
@@ -150,7 +148,7 @@
               </div>
             </div>
             <div class="container-input" >
-              <label for="" class="label">Módulo</label>
+              <label for="modulo-proposta" class="label">Módulo</label>
               <div class="container-input-general" id="c-modulo">
                 <div class="container-icon">
                 <i class="bi bi-grid-3x3-gap text-title color-third"></i>
@@ -165,7 +163,7 @@
               </div>
             </div>
             <div class="container-input" id="c-inversor">
-              <label for="" class="label">Inversor</label>
+              <label for="inversor-proposta" class="label">Inversor</label>
               <div class="container-input-general">
                 <div class="container-icon">
                   <i class="bi bi-plug text-title color-third"></i>
@@ -178,7 +176,7 @@
               </div>
             </div>
             <div class="container-input">
-              <label for="" class="label">Promoção (Opcional)</label>
+              <label for="promocao-proposta" class="label">Promoção (Opcional)</label>
               <div class="container-input-general">
                 <div class="container-icon">
                   <i class="bi bi-tag text-title color-third"></i>
@@ -197,9 +195,9 @@
           </div>
           <div class="main-card" id="main-consumo-proposta" >
             <div class="container-input f-direction-row gap-high">
-            <div class="container-input width-50" id="campo-consumo-proposta">
-              <label for="" class="label">Energia</label>
-              <div class="container-input-general">
+            <div class="container-input width-50" >
+              <label for="consumo-energia-proposta" class="label">Energia</label>
+              <div class="container-input-general" id="c-energia-proposta">
                 <div class="container-icon">
                   <i class="bi bi-lightning text-title color-third"></i>
                 </div>
@@ -207,8 +205,8 @@
                 </div>
               </div>
               <div class="container-input width-50">
-                <label for="" class="label">Placas</label>
-                <div class="container-input-general">
+                <label for="consumo-placa-proposta" class="label">Placas</label>
+                <div class="container-input-general " id="c-placa-proposta">
                   <div class="container-icon">
                   <i class="bi bi-layers text-title color-third"></i>
                   </div>
@@ -217,34 +215,23 @@
                   </div>
                 </div>
               </div>
-            
-            <div class="container-input " id="campo-dica-consumo-proposta">
-              <div class="container-tip" id="botao-dica-consumo">
+              <div class="container-input" >
+              <label for="expansao-proposta" class="label">Expansão de placas</label>
+              <div class="container-input-general" id="c-expansao">
                 <div class="container-icon">
-                <i class="bi bi-exclamation-circle text-title color-blue-background "></i>
+                <i class="bi bi-layers-fill text-title color-third"></i>
                 </div>
-                <p class="text-subtitle color-blue-background hidden" id="texto-dica-consumo"> Preencha apenas um campo, o outro será desativado sistemicamente.</p>
+                <select type="text" class="select-general"  id="expansao-proposta">
+                  <option value="" class="option-select">Selecione</option>
+                  <option value="Sim">Sim</option>
+                  <option value="Não">Não</option>
+ 
+                </select>
               </div>
             </div>
-            <div class="container-input " id="campo-expansao-proposta">
-              <label for="" class="label">Expansão de Placas </label>
-                <label class="switch">
-                  <input type="checkbox" class="expansao-proposta" id="status">
-                  <span class="slider"></span>
-                </label>
-            </div>        
-            <div class="container-input " id="campo-dica-expansao-proposta">
-              <div class="container-tip" id="botao-dica-expansao">
-                <div class="container-icon">
-                <i class="bi bi-exclamation-circle text-title color-blue-background"></i>
-                </div>
-                <p class="text-subtitle color-blue-background hidden" id="texto-dica-expansao"> Ative caso seja necessário uma expansão de placas de acordo com a necessidade.</p>
-              </div>
-            </div>
-            
             <div class="container-input hidden" id="container-qtd-expansao-proposta">
-              <label for="" class="label">Quantidade de placas</label>
-              <div class="container-input-general">
+              <label for="qtd-expansao-proposta" class="label">Quantidade de placas</label>
+              <div class="container-input-general" id="c-expansao-placa">
                 <div class="container-icon">
                   <i class="bi bi-layers text-title color-third"></i>
                 </div>
@@ -266,7 +253,7 @@
           </div>
           <div class="main-card row gap-high">
              <div class="container-input">
-              <label for="" class="label">Preço (R$/kWh)</label>
+              <label for="preco-kwh-proposta" class="label">Preço (R$/kWh)</label>
               <div class="container-input-general" id="c-preco-kwh">
                 <div class="container-icon">
                   <i class="bi bi-cash-coin text-tile color-third"></i>
@@ -275,7 +262,7 @@
               </div>
             </div>
             <div class="container-input" >
-              <label for="" class="label">Instalação</label>
+              <label for="instalacao-proposta" class="label">Instalação</label>
               <div class="container-input-general" id="c-instalacao">
                 <i class="bi bi-outlet text-title color-third"></i>
                 <select type="text" class="select-general" id="instalacao-proposta">
@@ -287,7 +274,7 @@
               </div>
             </div>
             <div class="container-input" >
-              <label for="" class="label">Telhado</label>
+              <label for="telhado-proposta" class="label">Telhado</label>
               <div class="container-input-general" id="c-telhado">
                 <i class="bi bi-house-up text-title color-third"></i>
                 <select type="text" class="select-general" id="telhado-proposta">
@@ -307,7 +294,7 @@
             <h3 class="text-title color-first">HSP</h3>
           </div>
           <div class="main-card-info">
-            <label for="" class="label">HSP (Horas de Sol Pleno)</label>
+            <p  class="label">HSP (Horas de Sol Pleno)</p>
             <p class="container-input-general background-white" id="hsp-proposta">0,00</p>
           </div>
         </article>
@@ -317,7 +304,7 @@
             <h3 class="text-large color-first">Placas</h3>
           </div>
           <div class="main-card-info">
-            <label for="" class="label">Quantidade de Placas</label>
+            <p  class="label">Quantidade de Placas</p>
             <p class="container-input-general background-white" id="quantidade-placa-proposta">0</p>
           </div>
         </article>
@@ -545,9 +532,19 @@
           </div>
         </article>
       </section>
-      <section class="container-dashboard " id="section-dashboard" >
+      <section class="screen-dashboard  hidden" id="section-dashboard" >
+
+       <!-- <article class="card-dashboard">
+       
+         
+              <iframe src="https://datastudio.google.com/embed/reporting/4dfb62b5-8a87-419c-a803-e86bd3d439c5/page/p_il93qf3r2d" class="dashboard-datastudio"></iframe>
+            
+       </article> -->
+
+        
+       
       </section>
-      <section class="container-lancamento   " id="section-lancamento">
+      <section class="screen-lancamento   " id="section-lancamento">
           <article class="card-lancamento-cliente">
             <header class="header-card-container">
                 <i class="bi bi-people icon-header-card"></i>
@@ -566,7 +563,7 @@
                 </div>
               </div>
               <div class="container-input" >
-                <label for="nome-inputa-lancamento" class="label color-first">CPF</label>
+                <label for="input-cpf-lancamento" class="label color-first">CPF</label>
                 <div class="container-input-general " id="container-cpf-lancamento">
                   <div class="container-icon">
                     <i class="bi bi-person-vcard text-title color-third"></i>
@@ -575,7 +572,7 @@
                 </div>
               </div>
               <div class="container-input" >
-                <label class="label color-first">Contato</label>
+                <label for="input-contato-lancamento" class="label color-first">Contato</label>
                 <div class="container-input-general" id="container-contato-lancamento">
                   <div class="container-icon">
                     <i class="bi bi-telephone text-title color-third"></i>
@@ -584,7 +581,7 @@
                 </div>
               </div>
               <div class="container-input" >
-                <label for="nome-inputa-lancamento" class="label color-first">RG</label>
+                <label for="input-rg-lancamento" class="label color-first">RG</label>
                 <div class="container-input-general" id="container-rg-lancamento">
                   <div class="container-icon">
                     <i class="bi bi-card-heading text-title color-third"></i>
@@ -593,7 +590,7 @@
                 </div>
               </div>
               <div class="container-input" >
-                <label for="nome-inputa-lancamento" class="label color-first">E-mail</label>
+                <label for="input-e-mail-lancamento" class="label color-first">E-mail</label>
                 <div class="container-input-general" id="container-email-lancamento">
                   <div class="container-icon">
                     <i class="bi bi-envelope text-title color-third"></i>
@@ -602,7 +599,7 @@
                 </div>
               </div>
                <div class="container-input" >
-                  <label for="" class="label color-first">CEP</label>
+                  <label for="input-cep-lancamento" class="label color-first">CEP</label>
                   <div class="container-input-general" id="container-cep-lancamento">
                     <div class="container-icon">
                     <i class="bi bi-pin-map text-title color-third"></i>
@@ -611,7 +608,7 @@
                   </div>
                 </div>
                 <div class="container-input" >
-                  <label for="nome-inputa-lancamento" class="label color-first">Rua</label>
+                  <label for="input-rua-lancamento" class="label color-first">Rua</label>
                   <div class="container-input-general" id="container-rua-lancamento">
                     <div class="container-icon">
                       <i class="bi bi-signpost-fill text-title color-third"></i>
@@ -620,7 +617,7 @@
                   </div>
                 </div>        
                 <div class="container-input" >
-                  <label for="" class="label color-first">Bairro</label>
+                  <label for="input-bairro-lancamento" class="label color-first">Bairro</label>
                   <div class="container-input-general" id="container-bairro-lancamento">
                     <div class="container-icon">
                       <i class="bi bi-signpost-split text-title color-third"></i>
@@ -629,7 +626,7 @@
                   </div>
                 </div>
                 <div class="container-input" >
-                  <label for="nome-inputa-lancamento" class="label color-first">Nº</label>
+                  <label for="input-numero-lancamento" class="label color-first">Nº</label>
                   <div class="container-input-general" id="container-numero-lancamento">
                     <div class="container-icon">
                       <i class="bi bi-mailbox text-title color-third"></i>
@@ -639,7 +636,7 @@
                 </div>
                 <div class="container-input f-direction-row gap-high">
                     <div class="container-input wid-70 " >
-                  <label for="nome-inputa-lancamento" class="label color-first">Cidade</label>
+                  <label for="input-cidade-lancamento" class="label color-first">Cidade</label>
                   <div class="container-input-general" id="container-cidade-lancamento">
                     <div class="container-icon">
                       <i class="bi bi-geo-alt text-title color-third"></i>
@@ -648,7 +645,7 @@
                   </div>
                 </div>
                 <div class="container-input wid-30" >
-                  <label for="nome-inputa-lancamento" class="label color-first">UF</label>
+                  <label for="input-estado-lancamento" class="label color-first">UF</label>
                   <div class="container-input-general" id="container-uf-lancamento">
                     <div class="container-icon">
                     <i class="bi bi-globe-americas text-title color-third"></i>
@@ -660,7 +657,7 @@
               </div>
                 </div>
                 <div class="container-input" >
-                <label for="nome-inputa-lancamento" class="label color-first">Número da Instalação</label>
+                <label for="input-numero-instalacao-lancamento" class="label color-first">Número da Instalação</label>
                 <div class="container-input-general" id="container-numero-instalacao-lancamento">
                   <div class="container-icon">
                     <i class="bi bi-clock text-title color-third"></i>
@@ -778,7 +775,7 @@
             </header>
             <div class="main-card">
                <div class="container-input">
-                <label for="nome-inputa-lancamento" class="label color-first">SDR</label>
+                <label for="input-sdr-lancamento" class="label color-first">SDR</label>
                 <div class="container-input-general" id="container-sdr-lancamento">
                   <div class="container-icon">
                     <i class="bi bi-person-bounding-box text-title color-third"></i>
@@ -799,7 +796,7 @@
                 </div>
               </div>
               <div class="container-input">
-                <label for="nome-inputa-lancamento" class="label color-first">Closer</label>
+                <label for="input-closer-lancamento" class="label color-first">Closer</label>
                 <div class="container-input-general" id="container-closer-lancamento">
                   <div class="container-icon">
                     <i class="bi bi-person-workspace text-title color-third"></i>
@@ -821,7 +818,7 @@
               </div>
               
               <div class="container-input">
-                <label for="nome-inputa-lancamento" class="label color-first">B.U</label>
+                <label for="input-bu-lancamento" class="label color-first">B.U</label>
                 <div class="container-input-general" id="container-bu-lancamento">
                   <div class="container-icon">
                     <i class="bi bi-grid-3x3-gap text-title color-third"></i>
@@ -835,7 +832,7 @@
                 </div>
               </div>
               <div class="container-input">
-                <label for="nome-inputa-lancamento" class="label color-first">Canal de Vendas</label>
+                <label for="input-canal-lancamento" class="label color-first">Canal de Vendas</label>
                 <div class="container-input-general" id="container-canal-vendas-lancamento">
                   <div class="container-icon">
                     <i class="bi bi-broadcast text-title color-third"></i>
@@ -866,7 +863,7 @@
             </header>
             <div class="main-card">
               <div class="container-input">
-                <label for="nome-inputa-lancamento" class="label color-first">Concessionária</label>
+                <label for="input-concessionaria-lancamento" class="label color-first">Concessionária</label>
                 <div class="container-input-general" id="container-concessionaria-lancamento">
                   <div class="container-icon">
                     <i class="bi bi-person-workspace text-title color-third"></i>
@@ -881,7 +878,7 @@
                 </div>
               </div>
               <div class="container-input">
-                <label for="nome-inputa-lancamento" class="label color-first">Unidade Comercial</label>
+                <label for="input-unidade-lancamento" class="label color-first">Unidade Comercial</label>
                 <div class="container-input-general" id="container-unidade-lancamento">
                   <div class="container-icon">
                     <i class="bi bi-building text-title color-third"></i>
@@ -893,7 +890,7 @@
                 </div>
               </div>
               <div class="container-input">
-                <label for="nome-inputa-lancamento" class="label color-first">Observação</label>
+                <label for="textarea-observacao" class="label color-first">Observação</label>
                 <div class="container-area-general">
                   <textarea name="" id="textarea-observacao" class="textarea-general  border-none" placeholder="Observação"></textarea>
                 </div>
@@ -1108,7 +1105,7 @@
             
           </article>
       </section>
-      <section class="container-negociacao  " id="section-negociacao">
+      <section class="screen-negociacao  " id="section-negociacao">
           <article class="card-negociacao-informacao">
             <div class="header-card-container">
                 <i class="bi bi-info icon-header-card"></i>
@@ -1199,7 +1196,7 @@
                 </div>
                 
                 <div class="container-input">
-                  <label for="" class="label color-text-first">Primeiro pagamento</label>
+                  <label for="valor-pagamento-1" class="label color-text-first">Primeiro pagamento</label>
                   <div class="container-input-general">
                     <div class="container-icon">
                       <i class="bi bi-piggy-bank text-title color-third"></i>
@@ -1208,7 +1205,7 @@
                   </div>
                 </div>
                 <div class="container-input">
-                  <label for="" class="label color-text-first">Tipo de Pagamento </label>
+                  <label for="forma-pagamento-1-negociacao" class="label color-text-first">Tipo de Pagamento </label>
                   <div class="container-input-general">
                     <div class="container-icon">
                     <i class="bi bi-question-diamond text-title color-third"></i>
@@ -1223,7 +1220,7 @@
                   </div>
                 </div>
                 <div class="container-input" id="campoQtdParcelas1" >
-                  <label for="" class="label color-text-first">Quantidade de Parcelas</label>
+                  <label for="parcela-pagamento-1-negociacao" class="label color-text-first">Quantidade de Parcelas</label>
                   <div class="container-input-general">
                     <div class="container-icon">
                     <i class="bi bi-receipt text-title color-third"></i>
@@ -1259,7 +1256,7 @@
                   <h3 class="text-large font-hard color-first">Pagamento 2</h3>
                 </div>
                 <div class="container-input" id="campo-valor-pagamento">
-                  <label for="" class="label color-text-first">Segundo pagamento</label>
+                  <label for="valor-pagamento-2" class="label color-text-first">Segundo pagamento</label>
                   <div class="container-input-general">
                     <div class="container-icon">
                       <i class="bi bi-piggy-bank text-title color-third"></i>
@@ -1268,7 +1265,7 @@
                   </div>
                 </div>
                 <div class="container-input" id="campo-tipo-pagamento">
-                  <label for="" class="label color-text-first">Tipo de Pagamento </label>
+                  <label for="forma-pagamento-2-negociacao" class="label color-text-first">Tipo de Pagamento </label>
                   <div class="container-input-general">
                     <div class="container-icon">
                     <i class="bi bi-question-diamond text-title color-third"></i>
@@ -1282,7 +1279,7 @@
                   </div>
                 </div>
                 <div class="container-input" id="campoQtdParcelas2">
-                  <label for="" class="label color-text-first">Quantidade de Parcelas</label>
+                  <label for="parcela-pagamento-2-negociacao" class="label color-text-first">Quantidade de Parcelas</label>
                   <div class="container-input-general">
                     <div class="container-icon">
                       <i class="bi bi-receipt text-title color-third"></i>
@@ -1475,9 +1472,9 @@
             <p class="text-subtitle color-first"> <i class="bi bi-rocket-takeoff icone-dica-negociacao"></i> <b> Dica:</b> Após preencher todas as informações, o sistema calculará automaticamente o MCS e verificará se a negociação atende às regras comerciais.</p>
           </div>
       </section>
-      <section class="container-historico  " id="section-historico" > 
+      <section class="screen-historico  " id="section-historico" > 
       </section>
-      <section class="container-proposta-pdf   " id="section-pdf">
+      <section class="screen-proposta-pdf   " id="section-pdf">
         <div class="container-pdf">
           <section class="pg-pdf pg-capa-pdf">
             <div class="capa-pdf">
@@ -1763,7 +1760,7 @@
         </div>
         
       </section>
-      <section class="container-finalizacao hidden " id="section-lancamento-finalizado">
+      <section class="screen-finalizacao hidden " id="section-lancamento-finalizado">
           <div class="card-final f-direction-collum gap-high">
               <i class="bi bi-check2-circle icon-super color-green-background background-icon-green"></i>
               <p class="icon-extra color-green">Lançamento concluído</p> 
@@ -1797,12 +1794,12 @@
     
   </section>
   <script src="js/plataforma/plataforma-carregar-dados.js?v=1.1.2"></script>
-  <script src="js/plataforma/plataforma-funcoes.js?v=1.1.1"></script>
+  <script src="js/plataforma/plataforma-funcoes.js?v=1.1.2"></script>
   <script src="js/plataforma/plataforma-funcoes-resumo.js?v=1.1.2"></script>
   <script src="js/plataforma/plataforma-navegacao.js?v=1.1.1"></script>
   <script src="js/plataforma/plataforma-gerar-proposta.js?v=1.1.1"></script>
   <script src="js/plataforma/plataforma-gerar-hsp.js?v=1.1.1"></script>
-  <script src="js/plataforma/plataforma-formulario.js?v=1.1.1"></script>
+  <script src="js/plataforma/plataforma-formulario.js?v=1.1.2"></script>
   <script src="js/plataforma/plataforma-usuarios.js?v=1.1.1"></script>
   <!--script para lancamento-->
   
