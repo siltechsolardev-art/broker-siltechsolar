@@ -189,7 +189,7 @@ function inserirPrecoKwh(){
 
     if(precoKwhFormularioProposta.value === ""){
 
-         proposta.precoKwh = 0.95
+         proposta.precoKwh = 1.08
         
     }
     else {
