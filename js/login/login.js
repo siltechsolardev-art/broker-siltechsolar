@@ -28,7 +28,7 @@ botaoAcessar.addEventListener('click', (e) =>
 
     window.location.href = "plataforma.html"
 }
-   else if(usuario.value === "alex@siltechsolar.com.br" && senha.value === "admin123") {
+   else if(usuario.value === "alex@siltechsolar.com.br" && senha.value === "Solar@01") {
 
     localStorage.setItem('usuarioAtivo', '2')
 
