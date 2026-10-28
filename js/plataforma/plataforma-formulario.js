@@ -35,30 +35,6 @@
     }
 
 
-// const mudarInversor = document.getElementById('inversor-proposta')
-
-// mudarInversor.addEventListener('change', mudarHibrido)
-
-// function mudarHibrido(){
-
-
-
-
-//     const containerHibrido = document.getElementById('main-hibrido-proposta')
-//     const containerConsumo = document.getElementById('main-consumo-proposta')
-
-//     if(mudarInversor.value === "Híbrido") {
-
-//        containerHibrido.classList.remove('hidden')
-//        containerConsumo.classList.add('hidden')
-//     }
-//     else if (mudarInversor.value === "String Ongrid"){
-
-//         containerConsumo.classList.remove('hidden')
-//         containerHibrido.classList.add('hidden')
-//     }
-// }
-
 function esconderPlataforma(){
 
     const logo = document.querySelector('.logo-plataforma')
