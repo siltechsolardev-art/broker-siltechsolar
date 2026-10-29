@@ -173,4 +173,4 @@ const swipeLocalLancamento = document.querySelector('.swipeLocal')
 
    const textareaRateio = document.getElementById('textarea-rateio')
 
- textareaEmbutido.addEventListener('input', attTextareaRateio)
+ textareaRateio.addEventListener('input', attTextareaRateio)

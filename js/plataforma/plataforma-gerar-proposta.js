@@ -16,7 +16,7 @@ let proposta = {
     modulo:"",
     inversor:"",
     hsp:0,
-    promocao:"",
+    promocao:"NÃO",
     placas:0,
     sistema:"",
     expansao:"Não",
