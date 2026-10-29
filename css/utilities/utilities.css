@@ -55,6 +55,10 @@
     width: auto;
     justify-content: space-evenly;
 }
+.height-auto {
+
+    height: auto !important;
+}
 .gap-high {
 
     gap: 12px;

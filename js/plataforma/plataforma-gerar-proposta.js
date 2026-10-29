@@ -51,6 +51,7 @@ let proposta = {
     valorNegociado:0,
     //Variaveis de lancamento
     cliente:"",
+    contato:0,
     cpf:0,
     rg:0,
     email:"",
@@ -79,8 +80,9 @@ let proposta = {
     canalLancamento:"",
     concessionaria:"",
     unidade:"",
-    observacao:"",
-    idLancamentoAtual: parseInt(localStorage.getItem("idAtualLancamento")) + 1
+    observacao:"Sem observações",
+    idLancamentoAtual: 0,
+    status:"Formalizado"
 }
 console.log(proposta)
 //Código nome proposta
@@ -208,7 +210,7 @@ gerarPdf.addEventListener('click', ()=>{
 
     localStorage.setItem('propostaGerada', JSON.stringify(proposta));
 
-    const url = "https://script.google.com/macros/s/AKfycbyd4nwSMmewBnYNoYEb4sz4NiV4P_fo47LCC7s8BwforLXV1WbDnYX3fs4CmtJwS7Va-A/exec";
+    const url = "https://script.google.com/macros/s/AKfycbzC1csz_FQFAON_9IW2yu1-4652fg2uFeXTxdK084kwNOHPlGl2gobDQTjSAVoBejDAtg/exec";
 
         fetch(url, {
             method: "POST",

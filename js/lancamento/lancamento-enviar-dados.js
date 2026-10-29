@@ -1,41 +1,48 @@
-const btnEnviarDadosLancamento = document.getElementById('btn-enviar-lancamento')
 
-btnEnviarDadosLancamento.addEventListener('click', enviarDadosLancamento)
+const btnEnviarDadosLancamento = document.getElementById('btn-enviar-lancamento');
 
-function enviarDadosLancamento() {
+btnEnviarDadosLancamento.addEventListener('click', enviarDadosLancamento);
 
-    let lancamentoValidado = "";
+async function enviarDadosLancamento() {
+    const lancamentoValidado = validarVazioLancamento();
 
-    lancamentoValidado = validarVazioLancamento()
-
-
-    if (lancamentoValidado === "Sim"){
-
-        return console.log("Proposta Não validada")
-        
+    if (lancamentoValidado === "Sim") {
+        console.log("Proposta não validada");
+        return;
     }
 
-    else {
+    try {
+        // Aguarda o retorno do ID do lançamento atual
+        const idLancamento = await solicitarIdllancamentoAtual();
 
-        console.log("Proposta Validada")
+        // Utiliza o ID retornado antes de enviar
+        proposta.idLancamento = idLancamento;
+        proposta.idLancamentoAtual = idLancamento + 1;
+        proposta.tipo = "registrarLançamento";
 
-    proposta.tipo = "registrarLançamento"
+        console.log("ID do lançamento:", proposta.idLancamento);
+        console.log("Proposta validada");
+        console.log(proposta);
+        
 
-    const url = "https://script.google.com/macros/s/AKfycbyd4nwSMmewBnYNoYEb4sz4NiV4P_fo47LCC7s8BwforLXV1WbDnYX3fs4CmtJwS7Va-A/exec"
-     fetch(url, {
+        const url = "https://script.google.com/macros/s/AKfycbzC1csz_FQFAON_9IW2yu1-4652fg2uFeXTxdK084kwNOHPlGl2gobDQTjSAVoBejDAtg/exec";
+
+        const response = await fetch(url, {
             method: "POST",
             body: JSON.stringify(proposta)
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-        })
-        .catch(error => {
-            console.error(error);
         });
-        attIdLancamento()
-        lancamentoFinalizadoSelecionado()
 
-        }
+        const data = await response.json();
 
+        console.log(data);
+
+        attIdLancamento();
+        lancamentoFinalizadoSelecionado();
+
+    } catch (error) {
+        console.error("Erro ao enviar lançamento:", error);
+    }
 }
+
+
+//Revisao código para ficar mais limpo, feito com auxilio do Chat, necessário limpar o código.
