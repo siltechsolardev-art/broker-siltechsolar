@@ -1,7 +1,7 @@
 
 async function solicitarIdllancamentoAtual() {
     const resposta = await fetch(
-        "https://script.google.com/macros/s/AKfycbzC1csz_FQFAON_9IW2yu1-4652fg2uFeXTxdK084kwNOHPlGl2gobDQTjSAVoBejDAtg/exec"
+        "https://script.google.com/macros/s/AKfycbyPPgbnYaN7txqu30GSWFMXbYeQIYEpkMjssCsYFh88Kvcx6De8AYnAP5mp5o444-YpQA/exec"
     );
 
     if (!resposta.ok) {
