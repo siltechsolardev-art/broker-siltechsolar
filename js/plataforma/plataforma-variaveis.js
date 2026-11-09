@@ -44,7 +44,7 @@ let proposta = {
     custoExpansao:0,
     custoRetorno:0,
     cmv:0,
-    valorFinalProposta:50000,
+    valorFinalProposta:0,
     //variaveis para economia e contas
     contaSemSiltech:0,
     contaComSiltech:0,

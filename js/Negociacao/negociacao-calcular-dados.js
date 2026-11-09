@@ -1,13 +1,12 @@
 function calcularDadosNegociacao(){
-
-// inserirPagamento2()
+inserirPagamento2()
 mostrarPagamento2()
 
 gerarTaxaPagamento1()
 gerarTaxaPagamento2()
 
-calcularTaxaPagamento1()
-calcularTaxaPagamento2()
+calcularPagamento1()
+calcularPagamento2()
 
 calcularPagamentoFinal()
     //Funções para inserir os dados na variavel Negociação
@@ -33,8 +32,6 @@ inserirResultadoAnalise()
 alterarCorResultado()
 
 atualizarResumoNegociacao()
-
-console.log(negociacao)
 
 }
 
@@ -76,7 +73,13 @@ function calcularMCsNegociado(){
         const mcsFinal =  (resultadoMcs / valorNegociado) *100
 
         negociacao.resultadoMcsNegociado = mcsFinal
-  
+
+        console.log("Comissao" + comissaoMcs)
+        console.log("Imposto" + impostoMcs)
+        console.log("CMV" + proposta.cmv)
+        console.log("Taxa em Reais" + taxaCartao)
+
+        
         return negociacao.resultadoMcsNegociado
     
 
@@ -356,7 +359,7 @@ function gerarTaxaPagamento2(){
    
    
 }
-function calcularTaxaPagamento1(){
+function calcularPagamento1(){
 
     const valor = document.getElementById('valor-pagamento-1').value
     const taxa = negociacao.taxaCartao1
@@ -368,15 +371,15 @@ function calcularTaxaPagamento1(){
   
     return negociacao.pagamentoCalculado1
 }
-function calcularTaxaPagamento2(){
+function calcularPagamento2(){
 
     const valor = document.getElementById('valor-pagamento-2').textContent
     const taxa = negociacao.taxaCartao2
 
-    const pagamento2 = Number(valor) * taxa / 100
+    const pagamento2 = (valor * taxa) / 100
 
     negociacao.pagamentoCalculado2 = pagamento2
-    
+
     return 
 }
 function calcularPagamentoFinal(){

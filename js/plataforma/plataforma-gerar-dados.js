@@ -138,7 +138,7 @@ function gerarPotencia() {
 
 }
  function gerarEconomiaEm15Anos() {
-    return proposta.economiaEm15Anos = (proposta.economiaAnual * ((1 + Number(dadosBanco.inflacao)) ** 15 - 1)) / Number(dadosBanco.inflacao);
+    return proposta.economiaEm15Anos = (proposta.economiaAnual * ((1 + inflacao) ** 15 - 1)) / inflacao;
 }
 function gerarEconomiaAnual() {
     const custoEnergia = proposta.precoKwh;

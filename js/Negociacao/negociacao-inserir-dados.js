@@ -1,4 +1,9 @@
 function inserirValorNegociado(){
+
+    
+  
+
+
     const valorNegociado = document.getElementById('valor-negociado-proposta') 
 
     negociacao.valorNegociado = valorNegociado.value
@@ -35,14 +40,12 @@ function inserirParcelas1(){
 
 function inserirPagamento2(){
 
+    const valor = document.getElementById("valor-negociado-proposta")
     const pagamento1 = document.getElementById("valor-pagamento-1")
 
-    let pagamento2 = negociacao.valorNegociado - pagamento1.value
+    let pagamento2 = valor.value - pagamento1.value
 
     negociacao.valorPagamento2 = pagamento2
-
-    console.log(negociacao.valorPagamento2)
-
 
     return negociacao.valorPagamento2
 
