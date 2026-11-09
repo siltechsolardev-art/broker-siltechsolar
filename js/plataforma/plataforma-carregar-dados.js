@@ -3,7 +3,8 @@ const comissao = 0.05
 const impostos = 0.06
 const retorno = 1000
 const inflacao = 0.01
-const url = "https://script.google.com/macros/s/AKfycbzivQXc8NQ0mPK0Xktz8zCtNpeP_Z-xcmCaB310foU-VT4qg0mJPymXzT_HCZxnxa5Xiw/exec"
+const url = "https://script.google.com/macros/s/AKfycbwgDFS-rvEUbqcFpd5QdFh9ZSM_Hey1xD6uP7-XecVtnsGlyvhN7VHG_nzCGz63-uzOIQ/exec"
+let dadosSolicitados = null
 
 async function solicitarDados() {
     const resposta = await fetch(url);
@@ -16,17 +17,11 @@ async function solicitarDados() {
 
     console.log("ID recebido:", dadosSolicitados);
 
-
-    return dadosSolicitados; // ESSENCIAL!
+    
+    return 
 }
+
+
 solicitarDados()
 
-async function atribuirDados(){
-
-    dadosBanco = await solicitarDadosBanco() 
-    console.log(dadosBanco)
-}
-
-solicitarDadosBanco()
-atribuirDados()
 //Revisao código para ficar mais limpo, feito com auxilio do Chat, necessário limpar o código.

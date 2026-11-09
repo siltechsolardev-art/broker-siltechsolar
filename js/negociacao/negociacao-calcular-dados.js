@@ -73,12 +73,6 @@ function calcularMCsNegociado(){
         const mcsFinal =  (resultadoMcs / valorNegociado) *100
 
         negociacao.resultadoMcsNegociado = mcsFinal
-
-        console.log("Comissao" + comissaoMcs)
-        console.log("Imposto" + impostoMcs)
-        console.log("CMV" + proposta.cmv)
-        console.log("Taxa em Reais" + taxaCartao)
-
         
         return negociacao.resultadoMcsNegociado
     
