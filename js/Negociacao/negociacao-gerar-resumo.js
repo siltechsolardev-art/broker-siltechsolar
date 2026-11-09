@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 
 
 function carregarProspostaNegociacao(){
@@ -380,3 +381,5 @@ function inserirParcela () {
 
         }
     }
+=======
+>>>>>>> Stashed changes

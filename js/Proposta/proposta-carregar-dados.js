@@ -77,29 +77,29 @@ dataProposta.textContent = dataPorExtenso();
 function mostrarInversor() 
 {
 
-    if (proposta.inversor === "1x 3kw") {
+    if (proposta.inversor === "Huawei Inversor - 3kW") {
 
-        return "01 inversor Huawei - 3kW"
+        return "01 Inversor Huawei - 3kW"
     }
-     if (proposta.inversor === "1x 6kw") {
+     if (proposta.inversor === "Huawei Inversor - 4kW") {
 
-        return "01 inversor Huawei - 6kW"
+        return "01 Inversor Huawei - 4kW"
     }
-     if (proposta.inversor === "1x 6kw + 1x 3kw") {
+     if (proposta.inversor === "Huawei Inversor - 5kW") {
 
-        return "02 Inversores Huawei - 3kW + 6kW"
+        return "01 Inversor Huawei - 5kW"
     }
-     if (proposta.inversor === "2x 6kw") {
+     if (proposta.inversor === "Huawei Inversor - 6kW") {
 
-        return "02 inversores Huawei - 6kW"
+        return "01 Inversor Huawei - 6kW"
      }
-     if (proposta.inversor === "3x 6kw") {
+     if (proposta.inversor === "Huawei Inversor - 7.5kW") {
 
-        return "03 inversores Huawei - 6kW"
+        return "01 Inversor Huawei - 7.5kW"
     }
-    if (proposta.inversor === "4x 6kw") {
+    if (proposta.inversor === "Huawei Inversor - 10kW") {
 
-        return "014 inversores Huawei - 6kW"
+        return "01 Inversor Huawei - 10kW"
     }
     
 
