@@ -111,7 +111,7 @@
   }
   function custoRetorno(){
 
-    const retorno = 1000
+    const retorno = Number(dadosBanco.retorno)
     proposta.custoRetorno = retorno
 
   return proposta.custoRetorno 
@@ -130,9 +130,12 @@
   }
    function valorFinalProposta() {
 
-    const valorFinal = (proposta.cmv / (1 - (contribuicao + impostos + comissao)));
+    const valorFinal = (proposta.cmv / (1 - (Number(dadosBanco.margemContribuicao) + Number(dadosBanco.impostos) + Number(dadosBanco.comissao))));
 
     proposta.valorFinalProposta = valorFinal
 
+
     return proposta.valorFinalProposta 
+
+    
   }

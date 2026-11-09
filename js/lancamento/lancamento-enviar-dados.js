@@ -37,9 +37,7 @@ async function enviarDadosLancamento() {
         console.log(proposta);
         
 
-        const url = "https://script.google.com/macros/s/AKfycbyPPgbnYaN7txqu30GSWFMXbYeQIYEpkMjssCsYFh88Kvcx6De8AYnAP5mp5o444-YpQA/exec";
-
-        const response = await fetch(url, {
+        const response = await fetch(urlBancoDeDados, {
             method: "POST",
             body: JSON.stringify(lancamento)
         });

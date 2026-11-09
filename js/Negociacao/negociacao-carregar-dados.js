@@ -23,3 +23,4 @@ valorFinalNegociacao.textContent = formatarMoeda(proposta.valorFinalProposta)
 
 }
 
+carregarDadosNegociacao()

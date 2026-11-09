@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-
 
 function carregarProspostaNegociacao(){
 const clienteNegociacao = document.getElementById('cliente-negociacao-proposta')
@@ -28,7 +26,7 @@ valorFinalNegociacao.textContent = formatarMoeda(proposta.valorFinalProposta)
 
 
     const precoAtualNegociacao = document.getElementById('valor-final-negociacao-proposta')
-    const valorNegociado = document.getElementById('valor-negociado-proposta')
+    const precoNegociado = document.getElementById('valor-negociado-proposta')
     const campoPagamento1 = document.getElementById('valor-pagamento-1')
 
     const formaPagamento1 = document.getElementById('forma-pagamento-1-negociacao')
@@ -40,7 +38,7 @@ valorFinalNegociacao.textContent = formatarMoeda(proposta.valorFinalProposta)
 
 
     campoPagamento1.addEventListener('input', atualizarDadosNavegacao)
-    valorNegociado.addEventListener('input', atualizarDadosNavegacao)
+    precoNegociado.addEventListener('input', atualizarDadosNavegacao)
 
     formaPagamento1.addEventListener('change', atualizarDadosNavegacao)
     formaPagamento2.addEventListener('change', atualizarDadosNavegacao)
@@ -50,7 +48,7 @@ valorFinalNegociacao.textContent = formatarMoeda(proposta.valorFinalProposta)
 
     function inserirValorNegociado(){
 
-      proposta.valorNegociado = valorNegociado.value
+      proposta.valorNegociado = precoNegociado.value
 
     }
     function inserirPagamento1(){
@@ -381,5 +379,3 @@ function inserirParcela () {
 
         }
     }
-=======
->>>>>>> Stashed changes
