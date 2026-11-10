@@ -1,4 +1,4 @@
-const negociacao = {
+let negociacao = {
 
     //Calculos de Negociação
     valorNegociado:0,

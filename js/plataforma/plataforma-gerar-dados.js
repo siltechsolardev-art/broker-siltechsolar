@@ -103,26 +103,6 @@ function gerarPotencia() {
 
   const campoModulo = document.getElementById('modulo-proposta')
 
-  if (campoModulo.value === "575Wp Tier 1" ) {
-
-    const potencia = 575
-    proposta.potenciaPlaca = potencia
-
-    return proposta.potenciaPlaca
-  }
-  if (campoModulo.value === "585Wp Tier 1" ) {
-    
-    const potencia = 585
-    proposta.potenciaPlaca = potencia
-    return proposta.potenciaPlaca
-  }
-    
-  if (campoModulo.value === "610Wp Tier 1" ) {
-    
-    const potencia = 610
-    proposta.potenciaPlaca = potencia
-    return proposta.potenciaPlaca
-  } 
   if (campoModulo.value === "615Wp Tier 1" ) {
     
     const potencia = 615
@@ -130,11 +110,7 @@ function gerarPotencia() {
     return proposta.potenciaPlaca
   } 
   
-  if (campoModulo.value === "700Wp Tier 1" ) {
-      const potencia = 700
-    proposta.potenciaPlaca = potencia
-    return proposta.potenciaPlaca
-  }
+
 
 }
  function gerarEconomiaEm15Anos() {
@@ -149,21 +125,11 @@ function calcularEnergia() {
     const placas = Number(proposta.placas);
     const hsp = Number(proposta.hsp);
 
-    if (modulo === "575Wp Tier 1") {
-      return proposta.energiaGerada = Number((hsp * 575 * 30 * 0.8) / 1000) * placas;
-    }
-    if (modulo === "585Wp Tier 1") {
-      return proposta.energiaGerada = Number((hsp * 585 * 30 * 0.8) / 1000) * placas;
-    }
+
      if (modulo === "615Wp Tier 1") {
       return proposta.energiaGerada = Number((hsp * 615 * 30 * 0.8) / 1000) * placas;
     }
-    if (modulo === "610Wp Tier 1") {
-      return  proposta.energiaGerada = Number((hsp * 610 * 30 * 0.8) / 1000) * placas;
-    }
-    if (modulo === "700Wp Tier 1") {
-      return proposta.energiaGerada = Number((hsp * 700 * 30 * 0.8) / 1000) * placas;
-    }
+ 
   }
 function contaComSiltech() {
     const instalacao = proposta.instalacao;

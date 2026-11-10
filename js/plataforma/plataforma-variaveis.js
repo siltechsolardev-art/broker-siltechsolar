@@ -40,7 +40,7 @@ let proposta = {
     custoKitGerador:0,
     custoTelhado:0,
     custoHomologacao:0,
-    custoInstalacao:0,
+    custoMaterialInstalacao:0,
     custoExpansao:0,
     custoRetorno:0,
     cmv:0,

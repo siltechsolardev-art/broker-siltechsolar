@@ -1,3 +1,10 @@
+function limpezaNovaProposta(){
+   limparCamposProposta()
+   limpezaCamposLancamento()
+   limpezaCamposNegociacao()
+   limparCamposResumo()
+}
+
 function limparCamposProposta() {
 
   const nomeProposta = document.getElementById('nome-proposta')
@@ -15,7 +22,8 @@ function limparCamposProposta() {
   const precoProposta = document.getElementById('preco-kwh-proposta')
   const instalacaoProposta = document.getElementById('instalacao-proposta')
   const telhadoProposta = document.getElementById('telhado-proposta')
-
+ const hpsProposta = document.getElementById('hsp-proposta')
+ const quantidadePlacas = document.getElementById('quantidade-placa-proposta')
   nomeProposta.value = ""
   telefoneProposta.value = ""
   testeProposta.value = ""
@@ -31,17 +39,20 @@ function limparCamposProposta() {
   precoProposta.value = ""
   instalacaoProposta.value = ""
   telhadoProposta.value = ""
-
+  hpsProposta.textContent = "0,00"
+  quantidadePlacas.textContent = "0"
   localStorage.removeItem('propostaGerada')
 
 }
-function limparCamposResumoProposta() {
+function limparCamposResumo() {
   const textos = document.querySelectorAll('.limpar-proposta');
 
   textos.forEach(texto => {
-    texto.textContent = "";
+    texto.textContent = "-";
   });
 }
+
+
 function limparCamposValidados (){
 
 

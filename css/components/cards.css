@@ -53,7 +53,7 @@ grid-column: 3/5;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 .card-proposta-resumo {
-grid-column: 7/10;
+    grid-column: 7/10;
     grid-row: 1/11;
     border-radius: 6px;
     background-color:white;
@@ -217,14 +217,16 @@ grid-column: 7/10;
 }
 .card-resumo-info {
 
-    padding: 4px 8px;
+    padding: 6px 10px;
     display: flex;
-    flex-direction: column;
-    gap: 6px;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     border: 1px solid var(--color-background);
     border-radius: 4px;
+    height:44px;
+    width: 90%;
+    
     
 }
 .card-final {

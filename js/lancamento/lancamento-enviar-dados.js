@@ -25,19 +25,32 @@ async function enviarDadosLancamento() {
 
         
 
-        const idLancamento = await solicitarIdllancamentoAtual();
+        const { maiorID } = await solicitarDados();
 
         // Utiliza o ID retornado antes de enviar
-        proposta.idLancamento = idLancamento;
-        proposta.idLancamentoAtual = idLancamento + 1;
+        lancamento.idLancamento = Number(maiorID);
+        lancamento.idLancamentoAtual = Number(maiorID) + 1;
 
 
-        console.log("ID do lançamento:", proposta.idLancamento);
+        console.log("ID do lançamento:", lancamento.idLancamento);
         console.log("Proposta validada");
         console.log(proposta);
+        //Adicionando valores na variavel Lancamento.
+
+        lancamento.data = proposta.data;
+        lancamento.inversor = proposta.inversor;
+        lancamento.modulo = proposta.modulo;
+        lancamento.placas = proposta.placas;
+        lancamento.telhado = proposta.telhado;
+        lancamento.mcs = negociacao.resultadoMcsNegociado;
+        lancamento.valorInicial = proposta.valorFinalProposta;
+        lancamento.valorFinal = negociacao.valorNegociado;
+        lancamento.pagamento = negociacao.tipoPagamento1;
+        lancamento.desconto = negociacao.desconto;
+        lancamento.promocao = proposta.promocao;
         
 
-        const response = await fetch(urlBancoDeDados, {
+        const response = await fetch(url, {
             method: "POST",
             body: JSON.stringify(lancamento)
         });

@@ -45,7 +45,7 @@ function calcularDados(){
   custoKitGerador() 
   custoTelhado() 
   custoHomologacao() 
-  custoInstalacao()
+  custoMaterialInstalacao()
   custoExpansao()
   custoRetorno()
   custoMercadoriaVendida() 

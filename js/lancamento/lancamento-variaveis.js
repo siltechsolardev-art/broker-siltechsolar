@@ -1,12 +1,13 @@
-const lancamento = {
+let lancamento = {
      //Variaveis de lancamento
     tipo:"registrarLançamento",
+   
     cliente:"",
     contato:0,
     cpf:0,
     rg:0,
     email:"",
-    cep:0,
+    cep:"",
     rua:"",
     bairro:"",
     numero:0,
@@ -34,6 +35,9 @@ const lancamento = {
     observacao:"Sem observações",
     idLancamentoAtual: 0,
     status:"Formalizado",
+    metaMensal:metaMensal,
+    //Dados solicitados de outras variaveis
+    data:proposta.data,
     inversor:proposta.inversor,
     modulo:proposta.modulo,
     placas:proposta.placas,

@@ -84,7 +84,7 @@ function atualizarResumo(){
     custoHomologacaoResumo.textContent = formatarMoeda(proposta.custoHomologacao)
 
     const custoInstalacaoResumo = document.getElementById('custo-instalacao-resumo-proposta')
-    custoInstalacaoResumo.textContent = formatarMoeda(proposta.custoInstalacao)
+    custoInstalacaoResumo.textContent = formatarMoeda(proposta.custoMaterialInstalacao)
 
     const custoRetornoResumo = document.getElementById('custo-retorno-resumo-proposta')
     custoRetornoResumo.textContent = formatarMoeda(proposta.custoRetorno)
@@ -117,5 +117,24 @@ function atualizarResumo(){
 
      const energiGeradaResumo = document.getElementById('energia-gerada-resumo-proposta')
     energiGeradaResumo.textContent = proposta.energiaGerada.toFixed(1)
+
+     const valorPlacaResumo = document.getElementById('valorPlaca-resumo-proposta')
+    valorPlacaResumo.textContent = formatarMoeda(proposta.valorPlaca)
+    
+    const valorInversorResumo = document.getElementById('valorInversor-resumo-proposta')
+    valorInversorResumo.textContent = formatarMoeda(proposta.valorInversor)
+
+    const valorCabosResumo = document.getElementById('valorCabos-resumo-proposta')
+    valorCabosResumo.textContent = formatarMoeda(proposta.valorCabos)
+
+    const valorEstruturaResumo = document.getElementById('valorEstrutura-resumo-proposta')
+    valorEstruturaResumo.textContent = formatarMoeda(proposta.valorEstrutura)
+
+    const valorCnectoresResumo = document.getElementById('valorConectores-resumo-proposta')
+    valorCnectoresResumo.textContent = formatarMoeda(proposta.valorConectores)
+
+
+    
+
 
 }
