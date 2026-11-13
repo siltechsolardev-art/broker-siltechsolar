@@ -114,7 +114,7 @@
                 <div class="container-icon">
                 <i class="bi bi-broadcast text-title color-third"></i>
                 </div>
-                <select type="text" class="select-general" placeholder="Digite o nome completo" id="canal-proposta">
+                <select type="text" class="select-general"  id="canal-proposta">
                   <option value="" class="option-general">Selecione</option>
                   <option value="Indicação" class="option-general">Indicação</option>
                   <option value="Field Sales" class="option-general">Field sales</option>
@@ -1710,12 +1710,12 @@
           <p class="font-hard icon-large color-first">Digital Simulação</p>
         </article>
         <article class="card-historico-cidade gap-high">
-          <i class="bi bi-broadcast text-title color-third"></i>
+          <i class="bi bi-geo-alt text-title color-third"></i>
           <p class="text-normal color-black">Cidade</p>
           <p class="font-hard icon-large color-first">São Paulo</p>
         </article>
         <article class="card-historico-busca">
-          <div class="container-input">
+          
               <label for="input-buscar-historico" class="label">Buscar</label>
               <div class="container-input-buscar wid-100">
                 <div class="container-icon ">
@@ -1723,7 +1723,52 @@
                 </div>
                 <input type="text" class="input-general " placeholder="Digite as informações para filtrar o histórico" id="input-buscar-historico">
               </div>
+            
+        </article>
+        <article class="card-historico-filtro">
+          
+              <div class="container-input">
+              <label for="teste-proposta" class="label">SDR</label>
+              <div class="container-input-general">
+                <div class="container-icon">
+                <i class="bi bi-person-bounding-box text-title color-third"></i>
+                </div>
+                <select type="text" class="select-general"  id="filtro-historico-sdr">
+                  <option value="" >Selecione</option>
+                    <option value="Gabriel Sato">Gabriel Sato</option>
+                    <option value="Alex Coelho">Alex Coelho</option>
+                    <option value="Pedro Henrique">Pedro Henrique</option>               
+                    <option value="Gustavo Munhoz">Gustavo Munhoz</option>
+                    <option value="Breno Celino">Breno Celino</option>
+                    <option value="Diego Mattos">Diego Mattos</option>
+                    <option value="Luiz Gustavo">Luiz Gustavo</option>
+                    <option value="Guilherme Macedo">Guilherme Macedo</option>
+                    <option value="Gabriel Cotrin">Gabriel Cotrin</option>
+                </select>
+              </div>
             </div>
+            <div class="container-input">
+              <label for="teste-proposta" class="label">Canal Vendas</label>
+              <div class="container-input-general">
+                <div class="container-icon">
+                <i class="bi bi-broadcast text-title color-third"></i>
+                </div>
+                <select type="text" class="select-general"  id="filtro-historico-canal">
+                  <option value="" class="option-general">Selecione</option>
+                  <option value="Indicação" class="option-general">Indicação</option>
+                  <option value="Field Sales" class="option-general">Field sales</option>
+                  <option value="Digital Simulação" class="option-general">Digital Simulação</option>
+                  <option value="SAGA" class="option-general">SAGA</option>
+                  <option value="Evento" class="option-general">Evento</option>
+                  <option value="Sindicato" class="option-general">Sindicato</option>
+                  <option value="Comunicação" class="option-general">Comunicação</option>
+                  <option value="Telefone" class="option-general">Telefone</option>
+                  <option value="Outros" class="option-general">Outros</option>
+                </select>
+              </div>
+            </div>
+           
+            
         </article>
         <article class="card-historico-main">
           <div class="header-historico">
@@ -1737,7 +1782,7 @@
           </div>
           <div class="wall-horizontal wid-100"></div>
           <div class="main-card">
-            
+
           </div>
         </article>
       </section>
