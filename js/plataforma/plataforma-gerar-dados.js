@@ -1,3 +1,4 @@
+
 function gerarColaborador() {
 
   const usuarioAtivo = document.getElementById('usuario-plataforma')

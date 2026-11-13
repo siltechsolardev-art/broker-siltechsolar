@@ -1,4 +1,4 @@
-function limparCamposNegociacao(){
+function limpezaCamposNegociacao(){
 
 const valorNegociado = document.getElementById('valor-negociado-proposta')
 const pagamento1 = document.getElementById('valor-pagamento-1')

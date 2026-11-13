@@ -68,7 +68,7 @@
       </div>
     </div>
     <main class="main-plataforma">
-      <section class="screen-proposta showGrid " id="section-proposta">
+      <section class="screen-proposta " id="section-proposta">
         <article class="card-proposta-cliente">
           <div class="header-card-container">
             <i class="bi bi-people icon-header-card"></i>
@@ -1692,9 +1692,56 @@
             
           </article>
       </section>
-      <section class="screen-historico " id="section-historico" > 
+      <section class="screen-historico showGrid " id="section-historico" > 
+        <article class="card-historico-propostas gap-high">
+          
+          <i class="bi bi-clipboard text-title color-third"></i>
+          <p class="text-normal color-black">Quantidade de Propostas</p>
+          <p class="font-hard icon-large color-first">195</p>
+        </article>
+        <article class="card-historico-ticket gap-high">
+          <i class="bi bi-piggy-bank text-title color-third"></i>
+          <p class="text-normal color-black">Ticket médio (Kit)</p>
+          <p class="font-hard icon-large color-first">R$ 25.000,00</p>
+        </article>
+        <article class="card-historico-canal gap-high">
+          <i class="bi bi-broadcast text-title color-third"></i>
+          <p class="text-normal color-black">Canal de Vendas</p>
+          <p class="font-hard icon-large color-first">Digital Simulação</p>
+        </article>
+        <article class="card-historico-cidade gap-high">
+          <i class="bi bi-broadcast text-title color-third"></i>
+          <p class="text-normal color-black">Cidade</p>
+          <p class="font-hard icon-large color-first">São Paulo</p>
+        </article>
+        <article class="card-historico-busca">
+          <div class="container-input">
+              <label for="input-buscar-historico" class="label">Buscar</label>
+              <div class="container-input-buscar wid-100">
+                <div class="container-icon ">
+                <i class="bi bi-search text-title color-third"></i>
+                </div>
+                <input type="text" class="input-general " placeholder="Digite as informações para filtrar o histórico" id="input-buscar-historico">
+              </div>
+            </div>
+        </article>
+        <article class="card-historico-main">
+          <div class="header-historico">
+            <p class="i text-normal font-hard color-first ">ID</p>
+            <p class="i text-normal font-hard color-first">Colaborador</p>
+            <p class="i text-normal font-hard color-first">Canal</p>
+            <p class="i text-normal font-hard color-first">Inversor</p>
+            <p class="i text-normal font-hard color-first">Cidade</p>
+            <p class="i text-normal font-hard color-first">Placas</p>
+            <p class="i text-normal font-hard color-first">Preco(R$)</p>
+          </div>
+          <div class="wall-horizontal wid-100"></div>
+          <div class="main-card">
+            
+          </div>
+        </article>
       </section>
-      <section class="screen-proposta-pdf " id="section-pdf">
+      <section class="screen-proposta-pdf  " id="section-pdf">
         <div class="container-pdf">
           <section class="pg-pdf pg-capa-pdf">
             <div class="capa-pdf">
@@ -1980,13 +2027,13 @@
         </div>
         
       </section>
-      <section class="screen-finalizacao  hidden" id="section-lancamento-finalizado">
+      <section class="screen-finalizacao hidden " id="section-lancamento-finalizado">
           <div class="card-final f-direction-collum gap-high">
               <i class="bi bi-check2-circle icon-super color-green-background background-icon-green"></i>
               
-              <p class="icon-large color-green ">Lançamento concluído</p> 
+              <p class="text-big color-green ">Lançamento concluído</p> 
               <div class="wall-horizontal wid-20"></div>
-              <p class="text-title color-blue-background ">O ID de lançamento é <span id="valor-id-lancamento-atual color-first"><b>-</b></span></p> 
+              <p class="text-title color-first i ">O ID de lançamento é <span class="color-first font-hard text-big" id="valor-id-lancamento-atual"><b>177</b></span></p> 
               <p class="text-normal color-first text-center wid-20">Os dados do cliente foram registrados e salvos com sucesso.</p>
               <div class="wall-horizontal wid-20"></div>
               <div class="bt gap-high wid-20 background-third" id="botao-lancamento-finalizacao-proposta">

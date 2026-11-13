@@ -23,7 +23,7 @@ const reforma = document.querySelector('.swipeReforma')
 const reformaArea = document.getElementById('textarea-reforma')
 const embutido = document.querySelector('.swipeEmbutido')
 const embutidoArea = document.getElementById('textarea-embutido')
-const rateio = document.querySelector('.swiperateio')
+const rateio = document.querySelector('.swipeRateio')
 const rateioArea = document.getElementById('textarea-rateio')
 
 const sdr = document.getElementById('input-sdr-lancamento')
@@ -48,17 +48,17 @@ cidade.value = ""
 uf.value = ""
 numeroInstalacao.value = ""
 
-local.disable = true
+local.disable
 localArea.value = ""
-unificacao.disable = true
+unificacao.disable
 unificacaoArea.value = ""
-adequacao.disable = true
+adequacao.disable
 adequacaoArea.value = ""
-reforma.disable = true
+reforma.disable
 reformaArea.value = ""
-embutido.disable = true
+embutido.disable
 embutidoArea.value = ""
-rateio.disable = true
+rateio.disable
 rateioArea.value = ""
 
 

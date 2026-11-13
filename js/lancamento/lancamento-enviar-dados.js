@@ -25,11 +25,11 @@ async function enviarDadosLancamento() {
 
         
 
-        const { maiorID } = await solicitarDados();
+        const { maiorId } = await solicitarDados();
 
         // Utiliza o ID retornado antes de enviar
-        lancamento.idLancamento = Number(maiorID);
-        lancamento.idLancamentoAtual = Number(maiorID) + 1;
+        lancamento.idLancamento = Number(maiorId);
+        lancamento.idLancamentoAtual = Number(maiorId) + 1;
 
 
         console.log("ID do lançamento:", lancamento.idLancamento);

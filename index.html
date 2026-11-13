@@ -15,13 +15,14 @@
     
     <section class="app-login">
     <div class="overlay"></div>
-    <section class="container-login">
+    <section class="container-login " id="screen-login">
       <img src="img/logo-siltech.png" alt="Logo Siltech" class="logo-login">
           <p class="text-title font-hard color-first">Siltech Broker</p>
           <div class="container-text flex-center gap-high wid-90">
             <p class="text-normal color-black text-center">Acelere o processo de vendas, organize propostas e conduza negociações com mais eficiência</p>
           </div>
-          <div class="wall-horizontal wid-90"></div>
+          <div class="wall-horizontal wid-80"></div>
+          <form action="" class="form-general wid-90 flex-center f-direction-collum">
         <div class="container-input ">
           <label for="input-usuario-login" class="label">Usuário</label>
           <div class="container-input-general">
@@ -48,20 +49,63 @@
           <i class="bi bi-x-circle text-title color-red"></i>
           <p class="text-large color-red" >Credenciais inválidas. Tente novamente.</p>
         </div>
-         <div class="bt gap-high background-first wid-90" id="btn-acessar">
+         <div class="bt gap-high background-first wid-90" id="btn-login-acessar">
               <div class="container-icon">
                 <i class="bi bi-box-arrow-right text-title color-white"></i>
               </div>
                 <p class="text-large color-white font-hard">Acessar Plataforma</p>
             </div>
-      </form>
+            </form>
       <div class="container-text flex-center gap-high wid-90">
         <i class="bi bi-shield-check text-title color-green"></i>
         <p class="text-large color-green">Seus dados estão protegidos e seguros</p>
       </div>
        </section>
+       <section class="flex-center radius pad-20 gap-med background-white z-index f-direction-collum  hidden" id="screen-autenticacao">
+          <i class="bi bi-arrow-clockwise color-third icon-extra loading " id="icone-autenticacao"></i>
+          <p class="text-title color-third" id="titulo-autenticacao">Autenticando</p>
+          <p class="text-title color-first pad-12" id="texto-autenticacao">Verificando suas credenciais… </p>
+       </section>
+       <section class="flex-center radius pad-20 z-index f-direction-collum hidden" id="screen-setores">
+        <div class="pad-16 flex-center f-direction-collum gap-high">
+          <img src="/img/logo-siltech.png" class="logo-login" alt="Logo Siltech Solar">
+          <p class="color-white font-hard text-title">Bem-vindo, <span id="colaborador-setor" class="color-third">Colaborador</span>, ao Broker da Siltech Solar</p>
+          <p class="color-white  text-normal">Escolha o setor em que deseja acessar as ferramentas e informações da sua equipe.</p>
+        </div>
+        <div class="pad-16 gap-high flex-center f-direction-row">
+          <article class="card-setor" id="card-setor-comercial">
+            <i class="bi bi-clipboard-plus icon-extra color-third"></i>
+            <p class="text-title color-first font-hard">Comercial</p>
+            <p class="text-subtitle color-black">Crie e acompanhe propostas</p>
+          </article>
+          <article class="card-setor" id="card-setor-adminstrativo">
+            <i class="bi bi-folder2-open icon-extra color-third"></i>
+            <p class="text-title color-first font-hard">Adminstrativo</p>
+            <p class="text-subtitle color-black">Organize processos internos</p>
+          </article>
+          <article class="card-setor" id="card-setor-financeiro">
+            <i class="bi bi-bank icon-extra color-third"></i>
+            <p class="text-title color-first font-hard">Financeiro</p>
+            <p class="text-subtitle color-black">Gerencie pagamentos e finanças</p>
+          </article>
+          <article class="card-setor" id="card-setor-projetos">
+            <i class="bi bi-kanban icon-extra color-third"></i>
+            <p class="text-title color-first font-hard">Projetos</p>
+            <p class="text-subtitle color-black">Planeje e acompanhe projetos</p>
+          </article>
+          <article class="card-setor" id="card-setor-pos-vendas">
+            <i class="bi bi-headset icon-extra color-third"></i>
+            <p class="text-title color-first font-hard">Pós Vendas </p>
+            <p class="text-subtitle color-black">Atenda e acompanhe clientes</p>
+          </article>
+        </div>
+        <p class="text-title color-white pad-8 align-self-down border-white" id="botao-sair-setores">Sair</p>
+       </section>
     </section>
-    <script src="js/login/login.js"></script>
-    <script src="js/login/index.js"></script>
+    <script src="js/login/login-carregar-dados.js"></script>
+    <script src="js/login/login-variaveis.js"></script>
+    <script src="js/login/login-enviar-dados.js"></script>
+    <script src="js/login/login-funcoes.js"></script>
+    <script src="js/login/login-botoes.js"></script>
 </body>
 </html>

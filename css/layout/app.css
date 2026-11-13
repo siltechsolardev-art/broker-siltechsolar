@@ -126,6 +126,19 @@
     box-sizing: border-box;
     
 }
+.screen-historico{
+
+    height: 100%;
+    width: 100%;
+    background-color: var(--cor-fundo-card);
+    display: none;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    padding: 16px;
+    gap: 16px;
+    box-sizing: border-box;
+}
+
 .screen-lancamento {
 
      height: 100%;

@@ -116,7 +116,7 @@ function historicoSelecionado(){
 
         const containerPropostaPdf = document.getElementById('section-pdf')
 
-      propostaNav.classList.remove('fundo-selecao')
+    propostaNav.classList.remove('fundo-selecao')
     iconeProposta.classList.remove('cor-selecao')
     textoProposta.classList.remove('cor-selecao')
 
@@ -135,7 +135,7 @@ function historicoSelecionado(){
 
     dashboardSection.classList.remove('showFlex');
     propostaSection.classList.remove('showGrid');
-    historicoSection.classList.add('showFlex');
+    historicoSection.classList.add('showGrid');
     negociacaoSection.classList.remove('showGrid');
      lancamentoSection.classList.remove('showGrid');
     containerPropostaPdf.classList.remove('showFlex')
@@ -236,10 +236,3 @@ function propostaPdfSelecionado(){
 
 }
 
-const btnSair = document.getElementById('botao-sair-plataforma')
-
-btnSair.addEventListener('click',(e) => {
-
-    e.preventDefault()
-    window.location.href = "index.html"
-})

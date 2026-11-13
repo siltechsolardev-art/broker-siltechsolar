@@ -55,11 +55,8 @@ function calcularPlacaComEnergia() {
 
     let energia = 0;
 
-    if (energiaGerada.value === "575Wp Tier 1") energia = 575;
-    if (energiaGerada.value === "585Wp Tier 1") energia = 585;
-    if (energiaGerada.value === "610Wp Tier 1") energia = 610;
-    if (energiaGerada.value === "700Wp Tier 1") energia = 700;
-
+    if (energiaGerada.value === "615Wp Tier 1") energia = 615;
+   
     const consumo = Number(document.getElementById("consumo-energia-proposta").value);
     const hsp = Number(proposta.hsp);
 
