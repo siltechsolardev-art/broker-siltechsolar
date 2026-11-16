@@ -68,7 +68,7 @@
       </div>
     </div>
     <main class="main-plataforma">
-      <section class="screen-proposta " id="section-proposta">
+      <section class="screen-proposta showGrid" id="section-proposta">
         <article class="card-proposta-cliente">
           <div class="header-card-container">
             <i class="bi bi-people icon-header-card"></i>
@@ -233,6 +233,22 @@
                   <i class="bi bi-layers text-title color-third"></i>
                 </div>
                 <input type="text" class="input-general" placeholder="Digite a quantidade de placas" id="qtd-expansao-proposta">
+              </div>
+            </div>
+            <div class="container-input hidden " id="bateria-container-proposta">
+              <label for="bateria-proposta"" class="label">Bateria</label>
+              <div class="container-input-general">
+                <div class="container-icon">
+                <i class="bi bi-battery-half text-title color-third"></i>
+                </div>
+                <select type="text" class="select-general"  id="bateria-proposta">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  
+ 
+                </select>
               </div>
             </div>
             
@@ -492,6 +508,14 @@
                 </div>
                 <div class="card-resumo-info validar-sdr flex-between">
                   <div class="flex-center gap-small">
+                  <i class="bi bi-battery-half text-title color-third"></i>
+                    <p class="text-normal color-text-first i">Valor Bateria</p>
+                    </div>
+                    <p id="valorBateria-resumo-proposta"class="text-normal color-first font-hard validar limpar-proposta">-</p>
+                  
+                </div>
+                <div class="card-resumo-info validar-sdr flex-between">
+                  <div class="flex-center gap-small">
                   <i class="bi bi-brightness-high text-title color-third"></i>
                     <p class="text-normal color-text-first i">Hsp</p>
                     </div>
@@ -551,6 +575,14 @@
             <div class="flex-center gap-small">
                   <i class="bi-receipt text-title color-third"></i>
                     <p class="text-normal color-text-first i">Custo Material Instalação</p>
+                    </div>
+                    <p id="custo-material-instalacao-resumo-proposta"class="text-normal color-first font-hard limpar-proposta">-</p>
+                  
+          </div>
+          <div class="card-resumo-info validar-sdr flex-between">
+            <div class="flex-center gap-small">
+                  <i class="bi-receipt text-title color-third"></i>
+                    <p class="text-normal color-text-first i">Custo Instalação</p>
                     </div>
                     <p id="custo-instalacao-resumo-proposta"class="text-normal color-first font-hard limpar-proposta">-</p>
                   
@@ -1692,7 +1724,7 @@
             
           </article>
       </section>
-      <section class="screen-historico showGrid " id="section-historico" > 
+      <section class="screen-historico  " id="section-historico" > 
         <article class="card-historico-propostas gap-high">
           
           <i class="bi bi-clipboard text-title color-third"></i>

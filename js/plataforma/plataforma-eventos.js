@@ -85,6 +85,10 @@ const telhadoFormularioProposta = document.getElementById('telhado-proposta')
 
 telhadoFormularioProposta.addEventListener('change', calcularDados)
 
+const bateriaFormularioProposta = document.getElementById('bateria-proposta')
+
+bateriaFormularioProposta.addEventListener('change', calcularDados)
+
 
 ///////////////////////////////////////////////////////////////////
 

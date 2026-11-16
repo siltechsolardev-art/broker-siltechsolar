@@ -83,8 +83,11 @@ function atualizarResumo(){
     const custoHomologacaoResumo = document.getElementById('custo-homologacao-resumo-proposta')
     custoHomologacaoResumo.textContent = formatarMoeda(proposta.custoHomologacao)
 
-    const custoInstalacaoResumo = document.getElementById('custo-instalacao-resumo-proposta')
-    custoInstalacaoResumo.textContent = formatarMoeda(proposta.custoMaterialInstalacao)
+    const custoMaterialInstalacaoResumo = document.getElementById('custo-material-instalacao-resumo-proposta')
+    custoMaterialInstalacaoResumo.textContent = formatarMoeda(proposta.custoMaterialInstalacao)
+
+     const custoInstalacaoResumo = document.getElementById('custo-instalacao-resumo-proposta')
+    custoInstalacaoResumo.textContent = formatarMoeda(proposta.custoInstalacao)
 
     const custoRetornoResumo = document.getElementById('custo-retorno-resumo-proposta')
     custoRetornoResumo.textContent = formatarMoeda(proposta.custoRetorno)
@@ -130,8 +133,12 @@ function atualizarResumo(){
     const valorEstruturaResumo = document.getElementById('valorEstrutura-resumo-proposta')
     valorEstruturaResumo.textContent = formatarMoeda(proposta.valorEstrutura)
 
-    const valorCnectoresResumo = document.getElementById('valorConectores-resumo-proposta')
-    valorCnectoresResumo.textContent = formatarMoeda(proposta.valorConectores)
+    const valorConectoresResumo = document.getElementById('valorConectores-resumo-proposta')
+    valorConectoresResumo.textContent = formatarMoeda(proposta.valorConectores)
+
+       const valorBateriasResumo = document.getElementById('valorBateria-resumo-proposta')
+    valorBateriasResumo.textContent = formatarMoeda(proposta.valorBateria)
+
 
 
     

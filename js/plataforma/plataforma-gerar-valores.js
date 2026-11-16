@@ -59,3 +59,11 @@ function valorConectores(){
    proposta.valorConectores = conectores
    return proposta.valorConectores  
 }
+function valorBateria(){
+
+
+   const valor = 9000
+   proposta.valorBateria = valor
+
+   return proposta.valorBateria
+}

@@ -36,11 +36,13 @@ let proposta = {
     valorCabos:0,
     valorEstrutura:0,
     valorConectores:0,
+    valorBateria:0,
     //variaveis para custos
     custoKitGerador:0,
     custoTelhado:0,
     custoHomologacao:0,
     custoMaterialInstalacao:0,
+    custoInstalacao:0,
     custoExpansao:0,
     custoRetorno:0,
     cmv:0,
@@ -50,7 +52,8 @@ let proposta = {
     contaComSiltech:0,
     economiaAnual:0,
     economiaEm15Anos:0,
-    
+     
+
     
 }
 

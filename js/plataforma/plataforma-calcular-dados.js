@@ -3,6 +3,8 @@
 function calcularDados(){
 
 
+
+
   gerarIdProposta()
   gerarDataProposta()
   gerarColaborador()
@@ -40,12 +42,14 @@ function calcularDados(){
   valorCabos()
   valorEstrutura()
   valorConectores()
+  valorBateria()
 
   //Funções para calcular os custos
   custoKitGerador() 
   custoTelhado() 
   custoHomologacao() 
   custoMaterialInstalacao()
+  custoInstalacao()
   custoExpansao()
   custoRetorno()
   custoMercadoriaVendida() 
