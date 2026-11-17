@@ -4,7 +4,7 @@ const impostos = 0.08
 const retorno = 500
 const inflacao = 0.01
 const metaMensal = 650000
-const url = "https://script.google.com/macros/s/AKfycbyc3XdrJfPS1buEyrfYOtoxyIHSZc_fHeK9YImkZnEhhDc2di6v4przZJjIwL9rvz7OFg/exec"
+const url = "https://script.google.com/macros/s/AKfycbzQ0GwOhOsClAGrDJN66dKm-5Xwl8-ZiPizA8IWADpriw9vMQJ60x7f7dWZqqrvxW2PGQ/exec"
 let dadosSolicitados = null
 verificarAutenticacao();
 async function solicitarDados() {
