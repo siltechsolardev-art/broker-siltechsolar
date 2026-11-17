@@ -243,13 +243,7 @@ function gerarInversor(){
 
 
 }
-function gerarInversorHibrido(){
 
-   
-    
-    
-
-}
 function gerarArea(){
 
     const area = proposta.placas * 3
