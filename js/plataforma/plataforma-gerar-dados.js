@@ -49,48 +49,194 @@ function gerarInversor(){
     const potencia = proposta.potenciaPlaca
     const inversor = placas * potencia
 
-    if(inversor < 4500) {
+    if(inversor <= 4500) {
 
-      proposta.inversor = "Huawei Inversor - 3kW"
+      proposta.inversor = "1 Inversor Huawei - 3kW"
 
       return proposta.inversor
     } 
-    if(inversor > 4500 && inversor < 6000) {
+    if(inversor >= 4500 && inversor < 6000) {
 
-      proposta.inversor = "Huawei Inversor - 4kW"
+      proposta.inversor = "1 Inversor Huawei - 4kW"
       
       return proposta.inversor
     } 
-    if(inversor > 6000 && inversor < 7500) {
+    if(inversor >= 6000 && inversor < 7500) {
 
-      proposta.inversor = "Huawei Inversor - 5kW"
+      proposta.inversor = "1 Inversor Huawei - 5kW"
       
       return proposta.inversor
     } 
-    if(inversor > 7500 && inversor < 9000) {
+    if(inversor >= 7500 && inversor < 9000) {
 
-      proposta.inversor = "Huawei Inversor - 6kW"
+      proposta.inversor = "1 Inversor Huawei - 6kW"
       
       return proposta.inversor
     } 
-    if(inversor > 9000 && inversor < 11250) {
+    if(inversor >= 9000 && inversor < 11250) {
 
-      proposta.inversor = "Huawei Inversor - 7.5kW"
+      proposta.inversor = "1 Inversor Huawei - 7.5kW"
       
       return proposta.inversor
     } 
-    if(inversor > 11250 && inversor < 15000) {
+    if(inversor >= 11250 && inversor < 15000) {
 
-      proposta.inversor = "Huawei Inversor - 10kW"
+      proposta.inversor = "1 Inversor Huawei - 10kW"
       
       return proposta.inversor
     } 
-    if(inversor > 15000) {
+    if(inversor >= 15000 && inversor < 19500) {
 
-      proposta.inversor = "Huawei Inversor - 10kW"
+      proposta.inversor = "2 Inversores Huawei - 10kW + 3kW"
+      return proposta.inversor
+    } 
+    if(inversor >= 19500 && inversor < 21000) {
+
+      proposta.inversor = "2 Inversores Huawei - 10kW + 4kW"
       
       return proposta.inversor
     } 
+    if(inversor >= 21000 && inversor < 22500) {
+
+      proposta.inversor = "2 Inversores Huawei - 10kW + 5kW"
+      
+      return proposta.inversor
+    } 
+    if(inversor >= 22500 && inversor < 24000) {
+
+      proposta.inversor = "2 Inversores Huawei - 10kW + 6kW"
+      
+      return proposta.inversor
+    } 
+    if(inversor >= 24000 && inversor < 26250) {
+
+      proposta.inversor = "2 Inversores Huawei - 10kW + 7.5kW"
+      
+      return proposta.inversor
+    } 
+    if(inversor >= 26250 && inversor < 30000) {
+
+      proposta.inversor = "2 Inversores Huawei - 10kW + 10kW"
+      
+      return proposta.inversor
+    } 
+    if(inversor >= 30000 && inversor < 34500) {
+
+      proposta.inversor = "3 Inversores Huawei - 10kW + 10kW + 3kW"
+      
+      return proposta.inversor
+    } 
+    if(inversor >= 34500 && inversor < 36000) {
+
+      proposta.inversor = "3 Inversores Huawei - 10kW + 10kW + 4kW"
+      
+      return proposta.inversor
+    } 
+    if(inversor >= 36000 && inversor < 37500) {
+
+      proposta.inversor = "3 Inversores Huawei - 10kW + 10kW + 5kW"
+      
+      return proposta.inversor
+    } 
+    if(inversor >= 37500 && inversor < 39000) {
+
+      proposta.inversor = "3 Inversores Huawei - 10kW + 10kW + 6kW"
+      
+      return proposta.inversor
+    } 
+    if(inversor >= 39000 && inversor < 41250) {
+
+      proposta.inversor = "3 Inversores Huawei - 10kW + 10kW + 7.5kW"
+      
+      return proposta.inversor
+    } 
+    if(inversor >= 41250 && inversor < 45000) {
+
+      proposta.inversor = "3 Inversores Huawei - 10kW + 10kW + 10kW"
+      
+      return proposta.inversor
+    } 
+    if(inversor >= 45000 && inversor < 49500) {
+
+      proposta.inversor = "4 Inversores Huawei - 10kW + 10kW + 10kW + 3kw"
+      
+      return proposta.inversor
+    } 
+    if(inversor >= 49500 && inversor < 51000) {
+
+      proposta.inversor = "4 Inversores Huawei - 10kW + 10kW + 10kW + 4kw"
+      
+      return proposta.inversor
+    } 
+    if(inversor >= 51000 && inversor < 52500) {
+
+      proposta.inversor = "4 Inversores Huawei - 10kW + 10kW + 10kW + 5kw"
+      
+      return proposta.inversor
+    } 
+    if(inversor >= 52500 && inversor < 54000) {
+
+      proposta.inversor = "4 Inversores Huawei - 10kW + 10kW + 10kW + 6kw"
+      
+      return proposta.inversor
+    } 
+    if(inversor >= 54000 && inversor < 56250) {
+
+      proposta.inversor = "4 Inversores Huawei - 10kW + 10kW + 10kW + 7.5kw"
+      
+      return proposta.inversor
+    } 
+    if(inversor >= 56250 && inversor < 60000) {
+
+      proposta.inversor = "4 Inversores Huawei - 10kW + 10kW + 10kW + 10kW"
+      
+      return proposta.inversor
+    } 
+    if(inversor >= 60000 ) {
+
+      proposta.inversor = "Acima da Capacidade"
+      
+      return proposta.inversor
+    } 
+
+
+}
+function gerarInversorHibrido(){
+
+    const placas = proposta.placas
+    const potencia = proposta.potenciaPlaca
+
+    if(placas <= 18) {
+
+      proposta.inversor = "1 Inversor Huawei Híbrido - 5,7kW"
+
+      return proposta.inversor
+    } 
+    if(placas >18 && placas <= 24) {
+
+      proposta.inversor = "1 Inversor Huawei Híbrido - 7,5kW"
+
+      return proposta.inversor
+    } 
+    if(placas >24 && placas <= 35) {
+
+      proposta.inversor = "2 Inversores Huawei Híbrido - 5,7kW"
+
+      return proposta.inversor
+    } 
+     if(placas >35 && placas <= 48) {
+
+      proposta.inversor = "2 Inversores Huawei Híbrido - 7,5kW"
+
+      return proposta.inversor
+    } 
+    if(placas >49 && placas <= 60) {
+
+      proposta.inversor = "3 Inversores Huawei Híbrido - 7,5kW + 7,5kW + 5,7kW"
+
+      return proposta.inversor
+    } 
+    
 
 }
 function gerarArea(){

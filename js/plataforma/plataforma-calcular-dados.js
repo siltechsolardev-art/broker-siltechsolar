@@ -34,6 +34,7 @@ function calcularDados(){
   
   gerarPotencia()
   gerarInversor()
+  gerarInversorHibrido()
 
   //Funções com valores que serão usados para calcular os custos
 

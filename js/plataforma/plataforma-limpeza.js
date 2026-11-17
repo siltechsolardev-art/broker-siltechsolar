@@ -52,7 +52,6 @@ function limparCamposResumo() {
   });
 }
 
-
 function limparCamposValidados (){
 
 

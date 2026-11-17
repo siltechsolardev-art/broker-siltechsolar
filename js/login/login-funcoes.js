@@ -149,3 +149,21 @@ function moverPlataformaComercial(){
 
      window.location.href = "plataforma.html"
 }
+
+const mostrarSenha = document.getElementById('mostrar-senha')
+const senha = document.getElementById('input-senha-login')
+mostrarSenha.addEventListener('click', ()=>{
+
+    if (senha.type === "password"){
+
+        senha.type = "text"
+        mostrarSenha.className = "bi bi-eye text-title color-third"
+    }
+    else {
+
+        mostrarSenha.className = "bi bi-eye-slash text-title color-third"
+            senha.type = 'password' 
+    }
+   
+})
+

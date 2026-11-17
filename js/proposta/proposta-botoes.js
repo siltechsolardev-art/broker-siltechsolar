@@ -5,7 +5,8 @@ const alterarProposta = document.getElementById('btn-alterar-proposta')
 novaProposta.addEventListener('click', ()=> {
 
     propostaSelecionado()
-    limpezaNovaProposta()
+    limparCamposProposta()
+    limparCamposResumo() 
 })
 
 moverNegociar.addEventListener('click', ()=> {

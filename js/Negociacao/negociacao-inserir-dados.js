@@ -103,7 +103,7 @@ function alterarCorResultado(){
 
     const resultado = negociacao.resultadoAnalise  
 
-    if (resultado === "Aprovado"){
+    if (resultado === "Autorizado"){
 
         container.classList.remove('background-gray');
 
@@ -132,7 +132,7 @@ function alterarCorResultado(){
 
     }
 
-     if (resultado === "Reprovado"){
+     if (resultado === "Impossível"){
 
         container.classList.remove('background-gray');
         icone.classList.replace('bi-emoji-expressionless','bi-emoji-frown')

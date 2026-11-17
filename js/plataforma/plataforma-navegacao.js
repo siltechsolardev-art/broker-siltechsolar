@@ -28,9 +28,27 @@ const textoLancamento = document.getElementById('texto-lancamento')
 
 const containerLancamentoFinalizado = document.getElementById('section-lancamento-finalizado')
 
-dashboardNav.addEventListener('click', dashboardSelecionado)
-propostaNav.addEventListener('click', propostaSelecionado)
-historicoNav.addEventListener('click', historicoSelecionado)
+dashboardNav.addEventListener('click', ()=>{
+
+    dashboardSelecionado()
+    limpezaNovaProposta()
+    
+})
+
+propostaNav.addEventListener('click', ()=> {
+
+
+    propostaSelecionado()
+    limpezaNovaProposta()
+    
+
+} )
+historicoNav.addEventListener('click',() => {
+
+    historicoSelecionado()
+    limpezaNovaProposta()
+
+} )
 
 
 
@@ -66,13 +84,12 @@ function dashboardSelecionado(){
 
     dashboardSection.classList.add('showFlex');
     propostaSection.classList.remove('showGrid');
-    historicoSection.classList.remove('showFlex');
+    historicoSection.classList.remove('showGrid');
     negociacaoSection.classList.remove('showGrid');
     lancamentoSection.classList.remove('showGrid');
     containerPropostaPdf.classList.remove('showFlex')
     containerLancamentoFinalizado.classList.add('hidden')
-    limparCamposProposta()
-    limparCamposResumo()
+     
 
 }
 function propostaSelecionado(){
@@ -103,13 +120,13 @@ function propostaSelecionado(){
 
     dashboardSection.classList.remove('showFlex');
     propostaSection.classList.add('showGrid');
-    historicoSection.classList.remove('showFlex');
+    historicoSection.classList.remove('showGrid');
     negociacaoSection.classList.remove('showGrid');
     lancamentoSection.classList.remove('showGrid');
     containerPropostaPdf.classList.remove('showFlex')
     containerLancamentoFinalizado.classList.add('hidden')
 
-   
+
    
 }
 function historicoSelecionado(){
@@ -140,8 +157,6 @@ function historicoSelecionado(){
      lancamentoSection.classList.remove('showGrid');
     containerPropostaPdf.classList.remove('showFlex')
     containerLancamentoFinalizado.classList.add('hidden')
-    limparCamposProposta()
-    limparCamposResumo()
 }
 function negociacaoSelecionado(){
 
@@ -166,11 +181,12 @@ function negociacaoSelecionado(){
 
     dashboardSection.classList.remove('showFlex');
     propostaSection.classList.remove('showGrid');
-    historicoSection.classList.remove('showFlex');
+    historicoSection.classList.remove('showGrid');
     negociacaoSection.classList.add('showGrid');
     lancamentoSection.classList.remove('showGrid');
     containerPropostaPdf.classList.remove('showFlex')
     containerLancamentoFinalizado.classList.add('hidden')
+    
 
 }
 function lancamentoSelecionado(){
@@ -197,7 +213,7 @@ function lancamentoSelecionado(){
 
     dashboardSection.classList.remove('showFlex');
     propostaSection.classList.remove('showGrid');
-    historicoSection.classList.remove('showFlex');
+    historicoSection.classList.remove('showGrid');
     negociacaoSection.classList.remove('showGrid');
     lancamentoSection.classList.add('showGrid');
     containerPropostaPdf.classList.remove('showFlex')
@@ -214,7 +230,7 @@ function lancamentoFinalizadoSelecionado(){
 
     dashboardSection.classList.remove('showFlex');
     propostaSection.classList.remove('showGrid');
-    historicoSection.classList.remove('showFlex');
+    historicoSection.classList.remove('showGrid');
     negociacaoSection.classList.remove('showGrid');
     lancamentoSection.classList.remove('showGrid');
     containerPropostaPdf.classList.remove('showFlex')

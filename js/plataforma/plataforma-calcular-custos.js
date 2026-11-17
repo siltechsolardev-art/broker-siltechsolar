@@ -150,7 +150,7 @@
   function custoMaterialInstalacao() {
 
     const placas = proposta.placas;
-    let instalacao = 1173;
+    let instalacao = 959.84;
     
 
 
@@ -214,7 +214,7 @@
   }
   function custoRetorno(){
 
-    const retorno = 1000
+    const retorno = 500
     proposta.custoRetorno = retorno
 
   return proposta.custoRetorno 
@@ -225,6 +225,7 @@
       proposta.custoKitGerador +
       proposta.custoTelhado +
       proposta.custoHomologacao +
+      proposta.custoInstalacao +
       proposta.custoMaterialInstalacao +
       proposta.custoRetorno +
       proposta.custoExpansao
@@ -262,7 +263,7 @@ function custoInstalacao(){
     }
     if(placas > 26 && placas <= 32) {
 
-      const valor = 160 * placas
+      const valor = 165 * placas
       proposta.custoInstalacao = valor
 
       return proposta.custoInstalacao

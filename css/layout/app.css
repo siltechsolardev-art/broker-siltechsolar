@@ -156,7 +156,7 @@
     height: 100%;
     width: 100%;
     background-color: var(--color-background-light);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;

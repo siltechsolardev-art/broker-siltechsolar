@@ -15,7 +15,6 @@ senha.addEventListener('input',() =>{
 })
 
 
-const mostrarSenha = document.getElementById('mostrar-senha')
 let usuarioAtivo = 0
 
 botaoAcessar.addEventListener('click', () =>{
@@ -36,18 +35,3 @@ senha.addEventListener('input',()=>{
     pError.classList.remove('mostrar')
 
 })
-mostrarSenha.addEventListener('click', ()=>{
-
-    if (senha.type === "password"){
-
-        senha.type = "text"
-        mostrarSenha.className = "bi bi-eye text-title color-third"
-    }
-    else {
-
-        mostrarSenha.className = "bi bi-eye-slash text-title color-third"
-            senha.type = 'password' 
-    }
-   
-})
-

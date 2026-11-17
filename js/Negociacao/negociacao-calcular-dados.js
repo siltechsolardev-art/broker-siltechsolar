@@ -63,7 +63,7 @@ function calcularMCsNegociado(){
 
 
     let comissaoMcs = valorNegociado * 0.05
-    let impostoMcs = valorNegociado * 0.06
+    let impostoMcs = valorNegociado * 0.08
     let taxaCartao = negociacao.pagamentoCalculado1 + negociacao.pagamentoCalculado2
 
 
@@ -80,32 +80,18 @@ function calcularMCsNegociado(){
     
 
 }
-function calcularResultadoAnalise(){
+function calcularResultadoAnalise() {
+  const resultadoMcs = Number(negociacao.resultadoMcsNegociado);
 
-    const resultadoMcs = negociacao.resultadoMcsNegociado
+  if (resultadoMcs > 29.9) {
+    negociacao.resultadoAnalise = "Autorizado";
+  } else if (resultadoMcs >= 27.1) {
+    negociacao.resultadoAnalise = "Autorização";
+  } else {
+    negociacao.resultadoAnalise = "Impossível";
+  }
 
-    if (resultadoMcs >= 30 ){
-
-        negociacao.resultadoAnalise = "Aprovado"
-
-        return proposta.resultadoAnalise
-    }
-
-    if (resultadoMcs >= 27 && resultadoMcs <= 29.99 ) {
-
-        negociacao.resultadoAnalise = "Autorização"
-
-        return proposta.resultadoAnalise
-    }
-
-    if  (resultadoMcs <= 26.99 ){
-
-        negociacao.resultadoAnalise = "Reprovado"
-
-        return proposta.resultadoAnalise
-    }
-
-
+  return negociacao.resultadoAnalise;
 }
 function gerarTaxaPagamento1(){
 
