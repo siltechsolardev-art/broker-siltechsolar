@@ -46,6 +46,45 @@ function gerarDataProposta() {
 function gerarInversor(){
 
     const placas = proposta.placas
+    const inversorTipo = document.getElementById('inversor-proposta')
+
+
+    if(inversorTipo.value === "Híbrido") {
+
+        if(placas <= 18) {
+
+        proposta.inversor = "1 Inversor Huawei Híbrido - 5,7kW"
+
+        return proposta.inversor
+      } 
+      if(placas >18 && placas <= 24) {
+
+        proposta.inversor = "1 Inversor Huawei Híbrido - 7,5kW"
+
+        return proposta.inversor
+      } 
+      if(placas >24 && placas <= 35) {
+
+        proposta.inversor = "2 Inversores Huawei Híbrido - 5,7kW"
+
+        return proposta.inversor
+      } 
+      if(placas >35 && placas <= 48) {
+
+        proposta.inversor = "2 Inversores Huawei Híbrido - 7,5kW"
+
+        return proposta.inversor
+      } 
+      if(placas >49 && placas <= 60) {
+
+        proposta.inversor = "3 Inversores Huawei Híbrido - 7,5kW + 7,5kW + 5,7kW"
+
+        return proposta.inversor
+      } 
+    }
+    if (inversorTipo.value === "String Ongrid"){
+
+      const placas = proposta.placas
     const potencia = proposta.potenciaPlaca
     const inversor = placas * potencia
 
@@ -199,43 +238,15 @@ function gerarInversor(){
       return proposta.inversor
     } 
 
+    }
+    
+
 
 }
 function gerarInversorHibrido(){
 
-    const placas = proposta.placas
-    const potencia = proposta.potenciaPlaca
-
-    if(placas <= 18) {
-
-      proposta.inversor = "1 Inversor Huawei Híbrido - 5,7kW"
-
-      return proposta.inversor
-    } 
-    if(placas >18 && placas <= 24) {
-
-      proposta.inversor = "1 Inversor Huawei Híbrido - 7,5kW"
-
-      return proposta.inversor
-    } 
-    if(placas >24 && placas <= 35) {
-
-      proposta.inversor = "2 Inversores Huawei Híbrido - 5,7kW"
-
-      return proposta.inversor
-    } 
-     if(placas >35 && placas <= 48) {
-
-      proposta.inversor = "2 Inversores Huawei Híbrido - 7,5kW"
-
-      return proposta.inversor
-    } 
-    if(placas >49 && placas <= 60) {
-
-      proposta.inversor = "3 Inversores Huawei Híbrido - 7,5kW + 7,5kW + 5,7kW"
-
-      return proposta.inversor
-    } 
+   
+    
     
 
 }
