@@ -21,19 +21,18 @@ function carregarDadosLancamento(){
     resumoQuantidadePlaca.textContent = proposta.placas
     resumoInversor.textContent = proposta.inversor
     resumoSistema.textContent = proposta.sistema
-    resumoMcs.textContent = proposta.mcs
-    resumoValorNegociado.textContent = formatarMoeda(proposta.valorNegociado)
+    resumoMcs.textContent = negociacao. resultadoMcsNegociado.toFixed(1) + "%"
+    resumoValorNegociado.textContent = formatarMoeda(negociacao.valorNegociado)
     resumoTelhado.textContent = proposta.telhado
-
     resumoValorInicial.textContent = formatarMoeda(proposta.valorFinalProposta)
-    resumoDesconto.textContent = proposta.desconto.toFixed(1) + "%"
-    resumoFormaPagamento.textContent = proposta.formaDePagamento1
+    resumoDesconto.textContent = negociacao.desconto.toFixed(1) + "%"
+    resumoFormaPagamento.textContent = negociacao.tipoPagamento1
     resumoPromocao.textContent = proposta.promocao
 
 }
 async function buscarCep(cep) {
 
-  
+    const campoCep = document.getElementById('input-cep-lancamento')
     const campoBairro = document.getElementById('input-bairro-lancamento')
     const campoCidade = document.getElementById('input-cidade-lancamento')
     const campoUf = document.getElementById('input-estado-lancamento')
@@ -41,9 +40,9 @@ async function buscarCep(cep) {
 
     const resumoCep = document.getElementById('endereco-resumo-lancamento')
     const resumoRua = document.getElementById('rua-resumo-lancamento')
-        const resumoBairro = document.getElementById('bairro-resumo-lancamento')
-            const resumoCidade = document.getElementById('cidade-resumo-lancamento')
-                const resumoEstado = document.getElementById('estado-resumo-lancamento')
+    const resumoBairro = document.getElementById('bairro-resumo-lancamento')
+    const resumoCidade = document.getElementById('cidade-resumo-lancamento')
+    const resumoEstado = document.getElementById('estado-resumo-lancamento')
 
 
 
@@ -68,15 +67,18 @@ async function buscarCep(cep) {
         inputCidadeLancamento.value = dados.localidade;
         inputEstadoLancamento.value = dados.uf;
 
-        proposta.bairro = campoBairro.value
-        proposta.rua = campoRua.value
-        proposta.cidade = campoCidade.value
-        proposta.estado = campoUf.value
 
-        resumoBairro.textContent = proposta.bairro
-        resumoCidade.textContent = proposta.cidade
-        resumoRua.textContent = proposta.rua
-        resumoEstado.textContent = proposta.estado
+        lancamento.cep = campoCep.value
+        lancamento.bairro = campoBairro.value
+        lancamento.rua = campoRua.value
+        lancamento.cidade = campoCidade.value
+        lancamento.estado = campoUf.value
+
+
+        resumoBairro.textContent = lancamento.bairro
+        resumoCidade.textContent = lancamento.cidade
+        resumoRua.textContent = lancamento.rua
+        resumoEstado.textContent = lancamento.estado
         
 
     } catch (erro) {
@@ -91,50 +93,50 @@ function attResumoNomeLancamento () {
 
     const resumoNomeLancamento = document.getElementById('cliente-resumo-lancamento')
 
-    proposta.cliente = campoNomeLancamento.value
-    resumoNomeLancamento.textContent = proposta.cliente
+    lancamento.cliente = campoNomeLancamento.value
+    resumoNomeLancamento.textContent = lancamento.cliente
 }
 function attResumoCpfLancamento () {
 
     const resumoCpfLancamento = document.getElementById('cpf-resumo-lancamento')
 
-    proposta.cpf = campoCpfLancamento.value
-    resumoCpfLancamento.textContent = proposta.cpf
+    lancamento.cpf = campoCpfLancamento.value
+    resumoCpfLancamento.textContent = lancamento.cpf
 }
 function attResumoContatoLancamento () {
 
     const resumoContatoLancamento = document.getElementById('contato-resumo-lancamento')
 
-    proposta.contato = campoContatoLancamento.value
-    resumoContatoLancamento.textContent = proposta.contato
+    lancamento.contato = campoContatoLancamento.value
+    resumoContatoLancamento.textContent = lancamento.contato
 }
 function attResumoRgLancamento () {
 
     const resumoRgLancamento = document.getElementById('rg-resumo-lancamento')
 
-    proposta.rg = campoRgLancamento.value
-    resumoRgLancamento.textContent = proposta.rg
+    lancamento.rg = campoRgLancamento.value
+    resumoRgLancamento.textContent = lancamento.rg
 }
 function attResumoEmailLancamento () {
 
     const resumoEmailLancamento = document.getElementById('e-mail-resumo-lancamento')
 
-    proposta.email = campoEmailLancamento.value
-    resumoEmailLancamento.textContent = proposta.email
+    lancamento.email = campoEmailLancamento.value
+    resumoEmailLancamento.textContent = lancamento.email
 }
 function attResumoNumeroLancamento(){
 
     const resumoNumero = document.getElementById('numero-resumo-lancamento')
-    proposta.numero = campoNumeroLancamento.value
-    resumoNumero.textContent = proposta.numero
+    lancamento.numero = campoNumeroLancamento.value
+    resumoNumero.textContent = lancamento.numero
     
 }
 function attResumoNumeroInstalacaoLancamento(){
 
        const resumoNumeroInstalacaoLancamento = document.getElementById('numero-instalacao-resumo-lancamento')
 
-    proposta.numeroInstalacao = campoNumeroInstalacaoLancamento.value
-    resumoNumeroInstalacaoLancamento.textContent = proposta.numeroInstalacao
+    lancamento.numeroInstalacao = campoNumeroInstalacaoLancamento.value
+    resumoNumeroInstalacaoLancamento.textContent = lancamento.numeroInstalacao
     
 }
 function attResumoLocalObraLancamento(){
@@ -144,13 +146,13 @@ function attResumoLocalObraLancamento(){
     if(swipeLocalLancamento.checked) {
 
 
-        proposta.obra = "Sim"
-        resumoLocal.textContent = proposta.obra
+        lancamento.obra = "Sim"
+        resumoLocal.textContent = lancamento.obra
     }
    else {
 
-        proposta.obra = "Não"
-        resumoLocal.textContent = proposta.obra
+        lancamento.obra = "Não"
+        resumoLocal.textContent = lancamento.obra
 
    }
       
@@ -162,13 +164,13 @@ function attResumoUnificacaoLancamento(){
     if(swipeUnificacaoLancamento.checked) {
 
 
-        proposta.unificacao = "Sim"
-        resumoUnificacao.textContent = proposta.unificacao
+        lancamento.unificacao = "Sim"
+        resumoUnificacao.textContent = lancamento.unificacao
     }
    else {
 
-        proposta.unificacao = "Não"
-        resumoUnificacao.textContent = proposta.unificacao
+        lancamento.unificacao = "Não"
+        resumoUnificacao.textContent = lancamento.unificacao
 
    }
       
@@ -180,13 +182,13 @@ function attResumoAdequacaoLancamento(){
     if(swipeAdequacaoLancamento.checked) {
 
 
-        proposta.adequacao = "Sim"
-        resumoAdequacao.textContent = proposta.adequacao
+        lancamento.adequacao = "Sim"
+        resumoAdequacao.textContent = lancamento.adequacao
     }
    else {
 
-        proposta.adequacao = "Não"
-        resumoAdequacao.textContent = proposta.adequacao
+        lancamento.adequacao = "Não"
+        resumoAdequacao.textContent = lancamento.adequacao
 
    }
       
@@ -198,13 +200,13 @@ function attResumoReformaLancamento(){
     if(swipeReformaLancamento.checked) {
 
 
-        proposta.reforma = "Sim"
-        resumoReforma.textContent = proposta.reforma
+        lancamento.reforma = "Sim"
+        resumoReforma.textContent = lancamento.reforma
     }
    else {
 
-        proposta.reforma = "Não"
-        resumoReforma.textContent = proposta.reforma
+        lancamento.reforma = "Não"
+        resumoReforma.textContent = lancamento.reforma
 
    }
       
@@ -216,13 +218,13 @@ function attResumoEmbutidoLancamento(){
     if(swipeEmbutidoLancamento.checked) {
 
 
-        proposta.embutido = "Sim"
-        resumoEmbutido.textContent = proposta.embutido
+        lancamento.embutido = "Sim"
+        resumoEmbutido.textContent = lancamento.embutido
     }
    else {
 
-        proposta.embutido = "Não"
-        resumoEmbutido.textContent = proposta.embutido
+        lancamento.embutido = "Não"
+        resumoEmbutido.textContent = lancamento.embutido
 
    }
       
@@ -234,13 +236,13 @@ function attResumoRateioLancamento(){
     if(swipeRateioLancamento.checked) {
 
 
-        proposta.rateio = "Sim"
-        resumoEmbutido.textContent = proposta.rateio
+        lancamento.rateio = "Sim"
+        resumoEmbutido.textContent = lancamento.rateio
     }
    else {
 
-        proposta.rateio = "Não"
-        resumoEmbutido.textContent = proposta.rateio
+        lancamento.rateio = "Não"
+        resumoEmbutido.textContent = lancamento.rateio
 
    }
       
@@ -249,80 +251,80 @@ function attResumoSdrLancamento() {
 
     const resumoSdr = document.getElementById('sdr-resumo-lancamento')
 
-    proposta.sdr = campoSdrLancamento.value
-    resumoSdr.textContent = proposta.sdr
+    lancamento.sdr = campoSdrLancamento.value
+    resumoSdr.textContent = lancamento.sdr
 }
 function attResumoCloserLancamento() {
 
     const resumoCloser = document.getElementById('closer-resumo-lancamento')
 
-    proposta.closer = campoCloserLancamento.value
-    resumoCloser.textContent = proposta.closer
+    lancamento.closer = campoCloserLancamento.value
+    resumoCloser.textContent = lancamento.closer
 }
 function attResumoBuLancamento() {
 
     const resumoBu = document.getElementById('bu-resumo-lancamento')
 
-    proposta.bu = campoBuLancamento.value
-    resumoBu.textContent = proposta.bu
+    lancamento.bu = campoBuLancamento.value
+    resumoBu.textContent = lancamento.bu
 }
 function attResumoCanalLancamento() {
 
     const resumoCanal = document.getElementById('canal-resumo-lancamento')
 
-    proposta.canalLancamento = campoCanalLancamento.value
-    resumoCanal.textContent = proposta.canalLancamento
+    lancamento.canalLancamento = campoCanalLancamento.value
+    resumoCanal.textContent = lancamento.canalLancamento
 }
 function attResumoConcessionariaLancamento() {
 
     const resumoConcessionaria = document.getElementById('concessionaria-resumo-lancamento')
 
-    proposta.concessionaria = campoConcessionariaLancamento.value
-    resumoConcessionaria.textContent = proposta.concessionaria
+    lancamento.concessionaria = campoConcessionariaLancamento.value
+    resumoConcessionaria.textContent = lancamento.concessionaria
 }
 function attResumoUnidadeLancamento() {
 
     const resumoUnidade = document.getElementById('unidade-resumo-lancamento')
 
-    proposta.unidade = campoUnidadeLancamento.value
-    resumoUnidade.textContent = proposta.unidade
+    lancamento.unidade = campoUnidadeLancamento.value
+    resumoUnidade.textContent = lancamento.unidade
 }
 function attResumoObservacaoLancamento() {
 
     const resumoObservacao = document.getElementById('observacao-resumo-lancamento')
 
-    proposta.observacao = campoObservacaoLancamento.value
-    resumoObservacao.textContent = proposta.observacao
+    lancamento.observacao = campoObservacaoLancamento.value
+    resumoObservacao.textContent = lancamento.observacao
 }
 function attTextareaObra(){
 
-    proposta.obsObra = textareaObra.value
+    lancamento.obsObra = textareaObra.value
 }
 function attTextareaUnificacao(){
 
-    proposta.obsUnificacao = textareaUnificacao.value
+    lancamento.obsUnificacao = textareaUnificacao.value
 }
 function attTextareaAdequacao(){
 
-    proposta.obsAdequacao = textareaAdequacao.value
+    lancamento.obsAdequacao = textareaAdequacao.value
 }
 function attTextareaReforma(){
 
-    proposta.obsReforma = textareaReforma.value
+    lancamento.obsReforma = textareaReforma.value
 }
 function attTextareaEmbutido(){
 
-    proposta.obsEmbutido = textareaEmbutido.value
+    lancamento.obsEmbutido = textareaEmbutido.value
 }
 function attTextareaRateio(){
 
-    proposta.obsRateio = textareaRateio.value
+    lancamento.obsRateio = textareaRateio.value
 }
 function attIdLancamento(){
 
 
     const idLancamento = document.getElementById('valor-id-lancamento-atual')
  
-    idLancamento.textContent = proposta.idLancamentoAtual
+    idLancamento.textContent = lancamento.idLancamentoAtual
 
 }

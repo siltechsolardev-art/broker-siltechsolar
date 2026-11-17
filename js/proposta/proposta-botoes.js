@@ -5,7 +5,6 @@ const alterarProposta = document.getElementById('btn-alterar-proposta')
 novaProposta.addEventListener('click', ()=> {
 
     propostaSelecionado()
-    localStorage.removeItem('propostaGerada')
     limparCamposProposta()
     limparCamposResumo() 
 })

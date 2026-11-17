@@ -1,0 +1,63 @@
+.loading {
+  display: inline-block;
+  animation: girar 1s linear infinite;
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#card-setor-comercial {
+  box-sizing: border-box;
+  transition: transform 250ms ease;
+}
+#card-setor-adminstrativo {
+  box-sizing: border-box;
+  transition: transform 250ms ease;
+}
+#card-setor-comercial {
+  box-sizing: border-box;
+  transition: transform 250ms ease;
+}
+#card-setor-financeiro {
+  box-sizing: border-box;
+  transition: transform 250ms ease;
+}
+#card-setor-projetos {
+  box-sizing: border-box;
+  transition: transform 250ms ease;
+}
+#card-setor-pos-vendas {
+  box-sizing: border-box;
+  transition: transform 250ms ease;
+}
+#card-setor-comercial:hover{
+
+
+  box-sizing: border-box;
+  transform: scale(1.06);
+}
+#card-setor-adminstrativo:hover{
+
+
+  box-sizing: border-box;
+  transform: scale(1.06);
+}
+#card-setor-financeiro:hover{
+
+  box-sizing: border-box;
+  transform: scale(1.06);
+}
+#card-setor-projetos:hover{
+
+  box-sizing: border-box;
+  transform: scale(1.06);
+}
+#card-setor-pos-vendas:hover{
+
+ 
+  box-sizing: border-box;
+  transform: scale(1.06);
+}

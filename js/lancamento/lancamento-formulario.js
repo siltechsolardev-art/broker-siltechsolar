@@ -125,26 +125,3 @@ function mostrarRateio() {
 
 }
 
-const botaoNovaProposta = document.getElementById('botao-lancamento-finalizacao-proposta')
-const botaoDashboard = document.getElementById('botao-lancamento-finalizacao-dashboard')
-const botaoHistorico = document.getElementById('botao-lancamento-finalizacao-historico')
-
-botaoNovaProposta.addEventListener('click', ()=>{
-
-    propostaSelecionado() 
-    limparCamposResumoProposta()
-    limparCamposProposta()
-
-})
-botaoDashboard.addEventListener('click', ()=>{
-
-    dashboardSelecionado()
-    limparCamposResumoProposta()
-    limparCamposProposta()
-})
-botaoHistorico.addEventListener('click', ()=>{
-
-    historicoSelecionado()
-    limparCamposResumoProposta()
-    limparCamposProposta()
-})

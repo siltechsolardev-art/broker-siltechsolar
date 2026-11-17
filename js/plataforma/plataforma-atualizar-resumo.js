@@ -2,6 +2,15 @@
 //Funções de custo
 function atualizarResumo(){
 
+    const idResumo = document.getElementById('id-resumo-proposta')
+    idResumo.textContent = proposta.id
+
+    const dataResumo = document.getElementById('data-resumo-proposta') 
+    dataResumo.textContent = proposta.data
+
+    const colaborador = document.getElementById('colaborador-resumo-proposta')
+    colaborador.textContent = proposta.colaborador
+
     const nomeResumo = document.getElementById('nome-resumo-proposta')
     nomeResumo.textContent = proposta.nome
 
@@ -74,14 +83,17 @@ function atualizarResumo(){
     const custoHomologacaoResumo = document.getElementById('custo-homologacao-resumo-proposta')
     custoHomologacaoResumo.textContent = formatarMoeda(proposta.custoHomologacao)
 
-    const custoInstalacaoResumo = document.getElementById('custo-instalacao-resumo-proposta')
+    const custoMaterialInstalacaoResumo = document.getElementById('custo-material-instalacao-resumo-proposta')
+    custoMaterialInstalacaoResumo.textContent = formatarMoeda(proposta.custoMaterialInstalacao)
+
+     const custoInstalacaoResumo = document.getElementById('custo-instalacao-resumo-proposta')
     custoInstalacaoResumo.textContent = formatarMoeda(proposta.custoInstalacao)
 
     const custoRetornoResumo = document.getElementById('custo-retorno-resumo-proposta')
     custoRetornoResumo.textContent = formatarMoeda(proposta.custoRetorno)
 
-    const custoEquipamentoResumo = document.getElementById('custo-equipamento-resumo-proposta')
-    custoEquipamentoResumo.textContent = formatarMoeda(proposta.custoEquipamento)
+    const custoKitGeradorResumo = document.getElementById('custo-kit-gerador-resumo-proposta')
+    custoKitGeradorResumo.textContent = formatarMoeda(proposta.custoKitGerador)
 
     const contaSemSiltechResumo = document.getElementById('conta-sem-siltech-resumo-proposta')
     contaSemSiltechResumo.textContent = validarDado(
@@ -109,80 +121,27 @@ function atualizarResumo(){
      const energiGeradaResumo = document.getElementById('energia-gerada-resumo-proposta')
     energiGeradaResumo.textContent = proposta.energiaGerada.toFixed(1)
 
-}
-//  function attResumoCustoTelhado(){
-
-//         const custoTelhadoResumo = document.getElementById('custo-telhado-resumo-proposta')
-
-//         custoTelhadoResumo.textContent = formatarMoeda(proposta.custoTelhado)
-
-        
-//  }
-//   function attResumoCustoInstalacao(){
-
-//         const custoInstalacaoResumo = document.getElementById('custo-instalacao-resumo-proposta')
-
-//         custoInstalacaoResumo.textContent = formatarMoeda(proposta.custoInstalacao)
-
-//         atualizarCalculos()
+     const valorPlacaResumo = document.getElementById('valorPlaca-resumo-proposta')
+    valorPlacaResumo.textContent = formatarMoeda(proposta.valorPlaca)
     
-//  }
-//  function attResumoCustoEquipamento(){
+    const valorInversorResumo = document.getElementById('valorInversor-resumo-proposta')
+    valorInversorResumo.textContent = formatarMoeda(proposta.valorInversor)
 
-//             const custoEquipamentoResumo = document.getElementById('custo-equipamento-resumo-proposta')
+    const valorCabosResumo = document.getElementById('valorCabos-resumo-proposta')
+    valorCabosResumo.textContent = formatarMoeda(proposta.valorCabos)
 
-//             custoEquipamentoResumo.textContent = formatarMoeda(proposta.custoEquipamento)
-//  }
-//  function attResumoContaComSiltech() {
+    const valorEstruturaResumo = document.getElementById('valorEstrutura-resumo-proposta')
+    valorEstruturaResumo.textContent = formatarMoeda(proposta.valorEstrutura)
 
-//     const contaComSiltechResumo = document.getElementById('conta-com-siltech-resumo-proposta')
+    const valorConectoresResumo = document.getElementById('valorConectores-resumo-proposta')
+    valorConectoresResumo.textContent = formatarMoeda(proposta.valorConectores)
 
-//     contaComSiltechResumo.textContent = formatarMoeda(proposta.contaComSiltech)
-//  }
-//   function attResumoContaSemSiltech() {
+       const valorBateriasResumo = document.getElementById('valorBateria-resumo-proposta')
+    valorBateriasResumo.textContent = formatarMoeda(proposta.valorBateria)
 
-//     const contaSemSiltechResumo = document.getElementById('conta-sem-siltech-resumo-proposta')
 
-//     contaSemSiltechResumo.textContent = formatarMoeda(proposta.contaSemSiltech)
-//  }
-//  function  attResumoCalcularEnergia(){
 
-//     const calcularEnergiaResumo = document.getElementById('energia-gerada-resumo-proposta')
+    
 
-//     calcularEnergiaResumo.textContent = proposta.energiaGerada
-//  }
-//  function attCustoHomologacao(){
 
-//     const custoHomologacaoResumo = document.getElementById('custo-homologacao-resumo-proposta')
-
-//     custoHomologacaoResumo.textContent = formatarMoeda(proposta.custoHomologacao)
-//  }
-//  function attResumoCmv(){
-
-//     const cmvResumo = document.getElementById('cmv-resumo-proposta')
-
-//     cmvResumo.textContent = formatarMoeda(proposta.cmv)
-//  }
-//  function attResumoCustoRetorno() {
-
-//     const retornoResumo = document.getElementById('retorno-resumo-proposta')
-
-//     retornoResumo.textContent = formatarMoeda(proposta.custoRetorno)
-//  }
-//  function attEconomiaAnual () {
-
-//     const ecomoniaAnualResumo = document.getElementById('economia-anual-resumo-proposta')
-
-//     ecomoniaAnualResumo.textContent = formatarMoeda(proposta.economiaAnual)
-//  }
-//  function attEconomiaEm15Anos(){
-
-//     const economiaEm15AnosResumo = document.getElementById('economia-15-resumo-proposta')
-
-//     economiaEm15AnosResumo.textContent = formatarMoeda(proposta.economiaEm15Anos)
-//  }
-//  function attValorFinalProposta(){
-
-//     const valorFinalPropostaResumo = document.getElementById('valor-final-resumo-proposta')
-//     valorFinalPropostaResumo.textContent = formatarMoeda(proposta.valorFinalProposta)
-//  }
+}

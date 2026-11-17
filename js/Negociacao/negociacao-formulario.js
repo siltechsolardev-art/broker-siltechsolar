@@ -48,8 +48,3 @@ function mostrarParcela2(){
    }
 }
 
-function resetarPagamento2(){
-
-   const tipoPagamento2 = document.getElementById('')
-   const quantidadePacela2 = document.getElementById('')
-}

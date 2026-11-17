@@ -69,3 +69,18 @@ function mostrarPlataforma(){
 
     main.classList.remove('mudarGrid')
 }
+ const selecionarSistema = document.getElementById('inversor-proposta')
+    selecionarSistema.addEventListener('change', mostrarHibrido)
+    function mostrarHibrido(){
+
+        const bateriaContainerProposta = document.getElementById('bateria-container-proposta')
+
+        if(selecionarSistema.value === "Híbrido") {
+
+            bateriaContainerProposta.classList.remove('hidden')
+        }
+        else {
+
+            bateriaContainerProposta.classList.add('hidden')
+        }
+    }

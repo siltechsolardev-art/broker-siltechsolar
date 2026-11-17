@@ -47,7 +47,7 @@ precoFinalProposta.textContent = proposta.valorFinalProposta.toLocaleString('pt-
     style: 'currency',
     currency: 'BRL'
 });
-inversorProposta.textContent = mostrarInversor()
+inversorProposta.textContent = proposta.inversor
 telhadoProposta.textContent = proposta.telhado
 contaSemProposta.textContent = proposta.contaSemSiltech.toLocaleString('pt-BR', {
     style: 'currency',
@@ -74,37 +74,7 @@ retornoInvestimentoProposta.textContent = proposta.economiaEm15Anos.toLocaleStri
 qtdPlacasModuloProposta.textContent = proposta.placas
 kitProposta.textContent = proposta.kitPlaca.toFixed(2) + "kWp";
 dataProposta.textContent = dataPorExtenso();
-function mostrarInversor() 
-{
 
-    if (proposta.inversor === "1x 3kw") {
-
-        return "01 inversor Huawei - 3kW"
-    }
-     if (proposta.inversor === "1x 6kw") {
-
-        return "01 inversor Huawei - 6kW"
-    }
-     if (proposta.inversor === "1x 6kw + 1x 3kw") {
-
-        return "02 Inversores Huawei - 3kW + 6kW"
-    }
-     if (proposta.inversor === "2x 6kw") {
-
-        return "02 inversores Huawei - 6kW"
-     }
-     if (proposta.inversor === "3x 6kw") {
-
-        return "03 inversores Huawei - 6kW"
-    }
-    if (proposta.inversor === "4x 6kw") {
-
-        return "014 inversores Huawei - 6kW"
-    }
-    
-
-    
-}
 function dataPorExtenso(data = new Date()) {
     return data.toLocaleDateString('pt-BR', {
         day: 'numeric',

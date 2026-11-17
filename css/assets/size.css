@@ -68,3 +68,27 @@
 
     padding: 16px;
 }
+.pad-20 {
+
+    padding: 20px;
+}
+.pad-side-4 {
+
+    padding: 0 4px ;
+}
+.pad-side-8 {
+
+    padding: 0 8px;
+}
+.pad-side-12 {
+
+    padding: 0 12px;
+}
+.pad-side-16 {
+
+    padding: 0 16px;
+}
+.pad-side-20 {
+
+    padding: 0 20px;
+}
