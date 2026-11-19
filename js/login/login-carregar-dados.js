@@ -1,4 +1,4 @@
-const url = "https://script.google.com/macros/s/AKfycbyc3XdrJfPS1buEyrfYOtoxyIHSZc_fHeK9YImkZnEhhDc2di6v4przZJjIwL9rvz7OFg/exec"
+const url = "https://script.google.com/macros/s/AKfycbzQ0GwOhOsClAGrDJN66dKm-5Xwl8-ZiPizA8IWADpriw9vMQJ60x7f7dWZqqrvxW2PGQ/exec"
 
 let dadosSolicitados = null
 
