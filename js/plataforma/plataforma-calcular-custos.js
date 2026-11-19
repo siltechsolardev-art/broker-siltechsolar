@@ -204,9 +204,9 @@
    
   }
   function custoExpansao() {
-    const expansao = document.getElementById('expansao-proposta');
+    const expansaoQtd = document.getElementById('qtd-expansao-proposta');
 
-    if (expansao.value === "Sim") {
+    if (expansaoQtd.value > 0) {
       return proposta.custoExpansao = 1000;
     } else {
       return proposta.custoExpansao =  0;
@@ -227,14 +227,14 @@
       proposta.custoHomologacao +
       proposta.custoInstalacao +
       proposta.custoMaterialInstalacao +
-      proposta.custoRetorno +
-      proposta.custoExpansao
+      proposta.custoRetorno
+      
 
     return proposta.cmv
   }
    function valorFinalProposta() {
 
-    const valorFinal = (proposta.cmv / (1 - (contribuicao + impostos + comissao)));
+    const valorFinal = proposta.custoExpansao + (proposta.cmv / (1 - (contribuicao + impostos + comissao)));
 
     proposta.valorFinalProposta = valorFinal
     return proposta.valorFinalProposta 
