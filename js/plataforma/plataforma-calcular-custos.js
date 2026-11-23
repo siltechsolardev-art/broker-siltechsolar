@@ -254,7 +254,7 @@ function custoInstalacao(){
 
       return proposta.custoInstalacao
     }
-    if(placas > 14 && placas <= 26) {
+    if(placas >= 14 && placas <= 26) {
 
       const valor = 180 * placas
       proposta.custoInstalacao = valor
