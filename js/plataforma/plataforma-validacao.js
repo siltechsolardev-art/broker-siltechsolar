@@ -24,7 +24,15 @@ function validacaoPorCampoVazio(){
   const telhado = document.getElementById('telhado-proposta')
   const containerTelhado = document.getElementById('c-telhado')
   const msgErro = document.getElementById('mensagem-erro-proposta')
+  const inversor = document.getElementById('inversor-proposta')
+  const containerInversor = document.getElementById('c-inversor')
 
+  if (inversor.value === "") {
+
+    containerInversor.classList.add('erro-borda')
+    msgErro.classList.remove("hidden")
+    return campoVazio = "Sim"
+  }
   if (nome.value === "") {
 
     containerNome.classList.add('erro-borda')
