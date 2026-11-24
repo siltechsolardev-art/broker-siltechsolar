@@ -53,31 +53,31 @@ function gerarInversor(){
 
         if(placas <= 18) {
 
-        proposta.inversor = "1 Inversor Huawei Híbrido - 5,7kW"
+        proposta.inversor = "01 - Inversor híbrido - 5,7 kW - Foxess"
 
         return proposta.inversor
       } 
       if(placas >18 && placas <= 24) {
 
-        proposta.inversor = "1 Inversor Huawei Híbrido - 7,5kW"
+        proposta.inversor = "01 - Inversor híbrido - 7,5 kW - Foxess"
 
         return proposta.inversor
       } 
       if(placas >24 && placas <= 35) {
 
-        proposta.inversor = "2 Inversores Huawei Híbrido - 5,7kW"
+        proposta.inversor = "02 - Inversores híbridos - 5,7 kW - Foxess"
 
         return proposta.inversor
       } 
       if(placas >35 && placas <= 48) {
 
-        proposta.inversor = "2 Inversores Huawei Híbrido - 7,5kW"
+        proposta.inversor = "02 - Inversores híbridos - 7,5 kW - Foxess"
 
         return proposta.inversor
       } 
       if(placas >49 && placas <= 60) {
 
-        proposta.inversor = "3 Inversores Huawei Híbrido - 7,5kW + 7,5kW + 5,7kW"
+        proposta.inversor = "02 - Inversores híbridos - 7,5 kW + 01 inversor híbrido 5,7 kW - Foxes"
 
         return proposta.inversor
       } 

@@ -220,7 +220,10 @@
   return proposta.custoRetorno 
   }
   function custoMercadoriaVendida() {
-    
+
+    const inversor = document.getElementById('inversor-proposta')
+    if(inversor.value === "String Ongrid"){
+
       proposta.cmv = 
       proposta.custoKitGerador +
       proposta.custoTelhado +
@@ -231,6 +234,25 @@
       
 
     return proposta.cmv
+
+    }
+    if(inversor.value === "Híbrido"){
+
+      const adicionalMaterial = 1500
+      const adicionalInstalacao = 1500
+      proposta.cmv = 
+      proposta.custoKitGerador +
+      proposta.custoTelhado +
+      proposta.custoHomologacao +
+      (proposta.custoInstalacao + adicionalMaterial)+
+      (proposta.custoMaterialInstalacao + adicionalInstalacao)+
+      proposta.custoRetorno
+      
+
+    return proposta.cmv
+
+    }
+      
   }
    function valorFinalProposta() {
 
