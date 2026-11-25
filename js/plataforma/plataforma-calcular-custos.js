@@ -56,7 +56,7 @@
 
       }
       if(sistema.value === "Híbrido"){
-        
+        const desconto = 0.10
         const valorBase = 22789.25 * (1 - desconto)
           const placasBase = 5
           const placas = proposta.placas
