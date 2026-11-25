@@ -4,8 +4,10 @@ function gerarColaborador() {
   const usuarioAtivo = document.getElementById('usuario-plataforma')
 
   proposta.colaborador = usuarioAtivo.textContent
-
+ console.log(proposta.custoMaterialInstalacao)
   return proposta.colaborador
+
+ 
 
 }
 function gerarIdProposta() {
@@ -53,31 +55,31 @@ function gerarInversor(){
 
         if(placas <= 18) {
 
-        proposta.inversor = "01 - Inversor híbrido - 5,7 kW - Foxess"
+        proposta.inversor = "01 Inversor híbrido - 5,7 kW - Foxess"
 
         return proposta.inversor
       } 
       if(placas >18 && placas <= 24) {
 
-        proposta.inversor = "01 - Inversor híbrido - 7,5 kW - Foxess"
+        proposta.inversor = "01 Inversor híbrido - 7,5 kW - Foxess"
 
         return proposta.inversor
       } 
       if(placas >24 && placas <= 35) {
 
-        proposta.inversor = "02 - Inversores híbridos - 5,7 kW - Foxess"
+        proposta.inversor = "02 Inversores híbridos - 5,7 kW - Foxess"
 
         return proposta.inversor
       } 
       if(placas >35 && placas <= 48) {
 
-        proposta.inversor = "02 - Inversores híbridos - 7,5 kW - Foxess"
+        proposta.inversor = "02 Inversores híbridos - 7,5 kW - Foxess"
 
         return proposta.inversor
       } 
       if(placas >49 && placas <= 60) {
 
-        proposta.inversor = "02 - Inversores híbridos - 7,5 kW + 01 inversor híbrido 5,7 kW - Foxes"
+        proposta.inversor = "02 Inversores híbridos - 7,5 kW + 01 Inversor híbrido 5,7 kW - Foxess"
 
         return proposta.inversor
       } 

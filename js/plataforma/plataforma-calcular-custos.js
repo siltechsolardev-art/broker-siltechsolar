@@ -5,58 +5,59 @@
 
       if(sistema.value === "String Ongrid"){
 
-        const valorBase = 6314.50
-            const placasBase = 4
-            const placas = proposta.placas
-            let acrescimo = 0.15
+        const desconto = 0.10
+        const valorBase = 6314.50 * (1 - desconto)
+        const placasBase = 4
+        const placas = proposta.placas
+        let acrescimo = 0.15
+        
       if (placas > 0 && placas <= 4 ) {
 
-        const valor = valorBase
+        const valor = valorBase  
         proposta.custoKitGerador =  valor
         return proposta.custoKitGerador
       }
 
       else if (placas > 4 && placas <= 9 ){
 
-        const valor = valorBase * (1 + acrescimo * (placas - placasBase))
+        const valor = valorBase * (1 + acrescimo * (placas - placasBase)) 
         proposta.custoKitGerador =  valor
         return proposta.custoKitGerador
 
       }
       else if (placas >= 10 && placas <= 49 ){
 
-        const valor = valorBase * (1 + (acrescimo + 0.01) * (placas - placasBase))
+        const valor = valorBase * (1 + (acrescimo + 0.01) * (placas - placasBase))  
         proposta.custoKitGerador =  valor
         return proposta.custoKitGerador
 
       }
       else if (placas >= 50 && placas <= 79 ){
 
-        const valor = valorBase * (1 + (acrescimo + 0.015) * (placas - placasBase))
+        const valor = valorBase * (1 + (acrescimo + 0.015) * (placas - placasBase)) 
         proposta.custoKitGerador =  valor
         return proposta.custoKitGerador
 
       }
        else if (placas == 80 ){
 
-        const valor = valorBase * (1 + (acrescimo + 0.012) * (placas - placasBase))
+        const valor = valorBase * (1 + (acrescimo + 0.012) * (placas - placasBase))  
         proposta.custoKitGerador =  valor
         return proposta.custoKitGerador
 
       }
       else if (placas > 80 ){
 
-        const valor = valorBase * (1 + (acrescimo + 0.013) * (placas - placasBase))
+        const valor = valorBase * (1 + (acrescimo + 0.013) * (placas - placasBase))  
         proposta.custoKitGerador =  valor
         return proposta.custoKitGerador
 
       }
 
-          console.log("1")
       }
       if(sistema.value === "Híbrido"){
         
-        const valorBase = 22789.25
+        const valorBase = 22789.25 * (1 - desconto)
           const placasBase = 5
           const placas = proposta.placas
           let adicional = 0.025
@@ -149,7 +150,10 @@
   }
   function custoMaterialInstalacao() {
 
-    const placas = proposta.placas;
+    const inversor = document.getElementById('inversor-proposta')
+    if (inversor.value === "String Ongrid"){
+
+      const placas = proposta.placas;
     let instalacao = 959.84;
     
 
@@ -158,8 +162,6 @@
 
         instalacao = instalacao * 1
         proposta.custoMaterialInstalacao = instalacao
-
-        
 
         return proposta.custoMaterialInstalacao 
       }
@@ -201,6 +203,62 @@
         return proposta.custoMaterialInstalacao 
       }
 
+
+    }
+    if (inversor.value ==="Híbrido"){
+      const adicional = 1500
+      const placas = proposta.placas;
+    let instalacao = 959.84;
+    
+
+
+      if(placas < 15) {
+
+        instalacao = (instalacao * 1 ) + adicional
+        proposta.custoMaterialInstalacao = instalacao
+
+        return proposta.custoMaterialInstalacao 
+      }
+      if(placas > 15 && placas <= 30)  {
+
+        instalacao = (instalacao * 2 ) + adicional
+        proposta.custoMaterialInstalacao = instalacao
+        
+        return proposta.custoMaterialInstalacao 
+      }
+      if(placas > 30 && placas <= 45)  {
+
+        instalacao = (instalacao * 3 ) + adicional
+        proposta.custoMaterialInstalacao = instalacao
+        return proposta.custoMaterialInstalacao 
+      }
+      if(placas > 45 && placas <=60)  {
+
+        instalacao = (instalacao * 4 ) + adicional
+        proposta.custoMaterialInstalacao = instalacao
+        return proposta.custoMaterialInstalacao 
+      }
+      if(placas > 60 && placas <=75)  {
+
+        instalacao = (instalacao * 5 ) + adicional
+        proposta.custoMaterialInstalacao = instalacao
+        return proposta.custoMaterialInstalacao 
+      }
+      if(placas > 75 && placas <=90)  {
+
+        instalacao = (instalacao * 6 ) + adicional
+        proposta.custoMaterialInstalacao = instalacao
+        return proposta.custoMaterialInstalacao 
+      }
+      if(placas > 90 && placas <=105)  {
+
+        instalacao = (instalacao * 7 ) + adicional
+        proposta.custoMaterialInstalacao = instalacao
+        return proposta.custoMaterialInstalacao 
+      }
+
+    }
+    
    
   }
   function custoExpansao() {
@@ -214,15 +272,13 @@
   }
   function custoRetorno(){
 
-    const retorno = 500
+    const retorno = 1000
     proposta.custoRetorno = retorno
 
   return proposta.custoRetorno 
   }
   function custoMercadoriaVendida() {
 
-    const inversor = document.getElementById('inversor-proposta')
-    if(inversor.value === "String Ongrid"){
 
       proposta.cmv = 
       proposta.custoKitGerador +
@@ -235,24 +291,8 @@
 
     return proposta.cmv
 
-    }
-    if(inversor.value === "Híbrido"){
 
-      const adicionalMaterial = 1500
-      const adicionalInstalacao = 1500
-      proposta.cmv = 
-      proposta.custoKitGerador +
-      proposta.custoTelhado +
-      proposta.custoHomologacao +
-      (proposta.custoInstalacao + adicionalMaterial)+
-      (proposta.custoMaterialInstalacao + adicionalInstalacao)+
-      proposta.custoRetorno
-      
-
-    return proposta.cmv
-
-    }
-      
+    
   }
    function valorFinalProposta() {
 
@@ -261,12 +301,12 @@
     proposta.valorFinalProposta = valorFinal
     return proposta.valorFinalProposta 
   }
-  
-
-
-
 function custoInstalacao(){
 
+  const inversor = document.getElementById('inversor-proposta')
+
+    if(inversor.value === "String Ongrid"){
+      
     const placas = proposta.placas
 
     if(placas <= 13) {
@@ -305,5 +345,50 @@ function custoInstalacao(){
       return proposta.custoInstalacao
     }
   
+
+
+    }
+    if(inversor.value === "Híbrido"){
+
+      const adicional = 1500
+      const placas = proposta.placas
+
+    if(placas <= 13) {
+
+      const valor = (205 * placas) + adicional
+      proposta.custoInstalacao = valor
+
+      return proposta.custoInstalacao
+    }
+    if(placas >= 14 && placas <= 26) {
+
+      const valor = (180 * placas) + adicional
+      proposta.custoInstalacao = valor
+
+      return proposta.custoInstalacao
+    }
+    if(placas > 26 && placas <= 32) {
+
+      const valor = (165 * placas) + adicional
+      proposta.custoInstalacao = valor
+
+      return proposta.custoInstalacao
+    }
+     if(placas > 32 && placas <= 48) {
+
+      const valor = (155 * placas) + adicional
+      proposta.custoInstalacao = valor
+
+      return proposta.custoInstalacao
+    }
+    if(placas > 48 ) {
+
+      const valor = (125 * placas) + adicional
+      proposta.custoInstalacao = valor
+
+      return proposta.custoInstalacao
+    }
+      }
+
 
   }
