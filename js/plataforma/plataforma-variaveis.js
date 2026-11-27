@@ -15,6 +15,7 @@ let proposta = {
     local:"",
     modulo:"",
     //Variavel gerada para receber o valor do inversor, de acordo com a quantidade de placas
+    bateria:"",
     inversor:"",
     hsp:0,
     promocao:"NÃO",

@@ -64,10 +64,6 @@
           const qtdBateria = document.getElementById('bateria-proposta').value
           const valorBateria = proposta.valorBateria * Math.max(0, qtdBateria - 1);
 
-          console.log(qtdBateria)
-          console.log(proposta.valorBateria)
-           console.log(valorBateria)
-
           if(placas <= 5){
 
             const valor = valorBase 
@@ -118,7 +114,7 @@
           }
       }
     
-   console.log("2")
+   
     
   }
 

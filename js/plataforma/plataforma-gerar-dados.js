@@ -55,31 +55,31 @@ function gerarInversor(){
 
         if(placas <= 18) {
 
-        proposta.inversor = "01 Inversor híbrido - 5,7 kW - Foxess"
+        proposta.inversor = "01 Inversor Híbrido FoxESS - 5,7 kW"
 
         return proposta.inversor
       } 
       if(placas >18 && placas <= 24) {
 
-        proposta.inversor = "01 Inversor híbrido - 7,5 kW - Foxess"
+        proposta.inversor = "01 Inversor Híbrido FoxESS - 7,5 kW"
 
         return proposta.inversor
       } 
       if(placas >24 && placas <= 35) {
 
-        proposta.inversor = "02 Inversores híbridos - 5,7 kW - Foxess"
+        proposta.inversor = "02 Inversores Híbridos FoxESS - 5,7 kW"
 
         return proposta.inversor
       } 
       if(placas >35 && placas <= 48) {
 
-        proposta.inversor = "02 Inversores híbridos - 7,5 kW - Foxess"
+        proposta.inversor = "02 Inversores Híbridos FoxESS - 7,5 kW"
 
         return proposta.inversor
       } 
       if(placas >49 && placas <= 60) {
 
-        proposta.inversor = "02 Inversores híbridos - 7,5 kW + 01 Inversor híbrido 5,7 kW - Foxess"
+        proposta.inversor = "02 Inversores Híbridos FoxESS - 7,5 kW + 01 Inversor Híbrido FoxESS 5,7 kW"
 
         return proposta.inversor
       } 
@@ -245,7 +245,18 @@ function gerarInversor(){
 
 
 }
+function gerarBateria(){
 
+  const placas = proposta.placas
+  const bateria = document.getElementById('bateria-proposta')
+
+  if(placas > 0){
+    proposta.bateria = "0"+ bateria.value + " Bateria FoxESS 5,7kWh"
+    return
+  }
+
+  
+}
 function gerarArea(){
 
     const area = proposta.placas * 3

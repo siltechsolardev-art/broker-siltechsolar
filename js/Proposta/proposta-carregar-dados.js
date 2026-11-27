@@ -1,10 +1,6 @@
 function carregarDadosProposta(){
 
-// const propostaGerada = JSON.parse(localStorage.getItem('propostaGerada'));
-
-// console.log(propostaGerada.nome)
-
-// console.log(propostaGerada)
+ mostrarBateria()
 
 const nomeProposta = document.getElementById('nome-proposta-pdf')
 const localProposta = document.getElementById('local-proposta-pdf')
@@ -27,7 +23,7 @@ const nomeAssinaturaProposta = document.getElementById('nome-assinatura-proposta
 const qtdPlacasModuloProposta = document.getElementById('placas-modulo-proposta-pdf');
 const dataProposta = document.getElementById('data-proposta-pdf');
 const kitProposta = document.getElementById('kit-proposta-pdf');
-
+const bateriaProposta = document.getElementById('bateria-proposta-pdf')
 
 nomeAssinaturaProposta.textContent = proposta.nome
 nomeProposta.textContent = proposta.nome + ","
@@ -82,4 +78,21 @@ function dataPorExtenso(data = new Date()) {
         year: 'numeric'
     });
 }
+bateriaProposta.textContent = proposta.bateria
+
+}
+
+function mostrarBateria(){
+
+
+    const campo = document.getElementById('campo-bateria')
+    const inversor = proposta.sistema
+    if(inversor === "Híbrido"){
+        campo.classList.remove('hidden')
+        return
+    }
+    if(inversor === "String Ongrid"){
+        campo.classList.add('hidden')
+        return
+    }
 }

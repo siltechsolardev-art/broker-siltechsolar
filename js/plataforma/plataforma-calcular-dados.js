@@ -34,7 +34,7 @@ function calcularDados(){
   
   gerarPotencia()
   gerarInversor()
-  
+  gerarBateria()
 
   //Funções com valores que serão usados para calcular os custos
 
@@ -75,7 +75,7 @@ function calcularDados(){
 
   limparCamposValidados ()
 
- 
+  console.log(proposta.bateria)
 
 }
 
